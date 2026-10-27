@@ -11,9 +11,9 @@ All scripts use the Python standard library. They write no files and make no net
 | Check | Evidence supplied | Boundary |
 |---|---|---|
 | [Covariance identity](check_covariance_identity.py) | Exact rational enumeration of 81 outcomes; recovers the displayed integer Gram | Uses a centered ternary law, not the lattice key sampler |
-| [Quadratic identity](check_quadratic_identity.py) | 640 coordinate identities; checks the exact $p^2$ factor and balanced lifts, including wrap cases | Synthetic preimages satisfy the equations algebraically; they are not scheme-generated keys |
-| [Theta moments](check_theta_moments.py) | Compares primal and dual second/fourth moments at widths 1, 1.25, 2, 4, 8 and 32; relative tolerance $10^{-12}$ | A finite floating-point check; certified precision and complexity are proved in the note |
-| [Integer recovery](check_integer_recovery.py) | 128 exact rational perturbation cases, coordinate scales through $10^{40}$, and two rank-two rejection examples | Assumes an already accurate matrix; does not implement convex optimization |
+| [Quadratic identity](check_quadratic_identity.py) | 640 coordinate identities; checks the exact $`p^2`$ factor and balanced lifts, including wrap cases | Synthetic preimages satisfy the equations algebraically; they are not scheme-generated keys |
+| [Theta moments](check_theta_moments.py) | Compares primal and dual second/fourth moments at widths 1, 1.25, 2, 4, 8 and 32; relative tolerance $`10^{-12}`$ | A finite floating-point check; certified precision and complexity are proved in the note |
+| [Integer recovery](check_integer_recovery.py) | 128 exact rational perturbation cases, coordinate scales through $`10^{40}`$, and two rank-two rejection examples | Assumes an already accurate matrix; does not implement convex optimization |
 
 Each script prints a JSON result with a status and its scope. The runner exits nonzero if any assertion fails, and prints “All four checks passed.” after success.
 

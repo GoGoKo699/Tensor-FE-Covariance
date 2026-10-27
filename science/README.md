@@ -15,5 +15,7 @@ The repository separates the model, statistical inference, measurement geometry,
 
 For a first pass, read the model, main theorem and interpretation. For a proof audit, follow the table from covariance through parameters, then check the theorem's interface and probability ledger.
 
+For a conceptual introduction, use the [project bridge](../learning/BRIDGE.md). The [learning route](../learning/README.md) connects the selected Peikert anchor and the project's 30 milestones to these authoritative statements and proofs.
+
 [Verification](../verification/README.md) contains small reproducible checks of specified algebraic identities. They support inspection of the proofs and do not replace the statistical or complexity arguments.
 

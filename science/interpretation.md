@@ -2,7 +2,7 @@
 
 ## The established conclusion
 
-The [main theorem](attack.md) gives a classical polynomial-time distinguisher for a specified degree-two family of the Cini–Lai–Ünal–Woo construction. It uses valid monomial functional keys and polynomially many known-zero encryptions. The two challenge messages are $0$ and $e_1$; every queried function evaluates to zero on both. The distinguishing gap is $1-\mathrm{negl}(\lambda)$.
+The [main theorem](attack.md) gives a classical polynomial-time distinguisher for a specified degree-two family of the Cini–Lai–Ünal–Woo construction. It uses valid monomial functional keys and polynomially many known-zero encryptions. The two challenge messages are $`0`$ and $`e_1`$; every queried function evaluates to zero on both. The distinguishing gap is $`1-\mathrm{negl}(\lambda)`$.
 
 The same mechanism distinguishes the corresponding direct secret-key tensor-preimage assumption experiments in [the model](model.md). That implication is established from their explicit distributions, not inferred merely from a failure of the construction.
 
@@ -11,9 +11,9 @@ The same mechanism distinguishes the corresponding direct secret-key tensor-prei
 The shared key material makes different output noises correlated. Those correlations are useful even though the encryption noise is very wide.
 
 1. **Normalize the observations.** Dividing by the known encryption variance yields bounded standardized moments controlled by dimensions and short-key sizes.
-2. **Recover a discrete invariant.** Subtract the known covariance contributions and round to the exact integer Gram $H_s^{\mathsf T}H_s$.
-3. **Remove its image.** The Gram identifies the mixed nuisance kernel without revealing a particular factor $H_s$. Add the known auxiliary-key kernel and project.
-4. **Test a rank-one explanation.** Zero-message data become measurements of $ee^{\mathsf T}$. The other challenge retains a transverse term. Joint restricted isometry makes that term uniformly incompatible with every rank-one explanation.
+2. **Recover a discrete invariant.** Subtract the known covariance contributions and round to the exact integer Gram $`H_s^{\mathsf T}H_s`$.
+3. **Remove its image.** The Gram identifies the mixed nuisance kernel without revealing a particular factor $`H_s`$. Add the known auxiliary-key kernel and project.
+4. **Test a rank-one explanation.** Zero-message data become measurements of $`ee^{\mathsf T}`$. The other challenge retains a transverse term. Joint restricted isometry makes that term uniformly incompatible with every rank-one explanation.
 5. **Keep the algorithm finite.** Rational projection, bounded convex feasibility, integer rounding and an exact residual test establish polynomial bit complexity.
 
 The proof of geometry precedes the key-dependent projection. Conditioning on that projection and pretending the remaining measurements are independent Gaussian matrices would be an invalid shortcut.
@@ -30,7 +30,7 @@ These facts do not say that arbitrarily large noise is harmless to every attack.
 |---|---|
 | Ordinary LWE is easy | The proof uses additional correlated preimage key material and supplies no ordinary-LWE solver |
 | Every parameter choice is covered | The number of columns must dominate the mixed nuisance dimension up to logarithmic factors |
-| Any number of keys suffices | The theorem uses $\Theta(k^2)$ valid keys |
+| Any number of keys suffices | The theorem uses $`\Theta(k^2)`$ valid keys |
 | Higher degrees follow automatically | The worked geometry and recovery theorem are degree two |
 | A practical cryptanalytic tool has been built | The algorithm has a polynomial-time existence proof with conservative constants; no full implementation or timing claim is supplied |
 | Different polynomial supports alone imply efficient distinction | Efficient hidden-Gram learning and uniform reconstruction are necessary parts of this proof |

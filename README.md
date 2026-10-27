@@ -4,9 +4,9 @@
 
 This repository develops a classical polynomial-time distinguishing argument for an explicit degree-two family of the tensor-based secret-key functional encryption construction of [Cini, Lai, Ünal and Woo, ePrint 2026/1977](https://eprint.iacr.org/2026/1977).
 
-The adversary uses valid monomial functional keys and polynomially many honest encryptions of a known zero message. It learns an exact hidden integer Gram matrix from cross-covariances, removes the corresponding nuisance subspace, and distinguishes the challenge messages $0$ and $e_1$ by testing for a rank-one explanation. All requested functions agree on those two messages.
+The adversary uses valid monomial functional keys and polynomially many honest encryptions of a known zero message. It learns an exact hidden integer Gram matrix from cross-covariances, removes the corresponding nuisance subspace, and distinguishes the challenge messages $`0`$ and $`e_1`$ by testing for a rank-one explanation. All requested functions agree on those two messages.
 
-**The proved distinguishing gap is $1-\mathrm{negl}(\lambda)$ under the explicit dimension, smoothing, width and correctness conditions in the [main theorem](science/attack.md).** An [asymptotic parameter family](science/parameters.md) satisfies these conditions together with the target's numerical safeguards and compactness requirement. The result also applies directly to the corresponding degree-two secret-key tensor-preimage assumption experiment.
+**The proved distinguishing gap is $`1-\mathrm{negl}(\lambda)`$ under the explicit dimension, smoothing, width and correctness conditions in the [main theorem](science/attack.md).** An [asymptotic parameter family](science/parameters.md) satisfies these conditions together with the target's numerical safeguards and compactness requirement. The result also applies directly to the corresponding degree-two secret-key tensor-preimage assumption experiment.
 
 The claim is parameter-dependent. It supplies no ordinary-LWE algorithm and no practical attack timing.
 
@@ -19,14 +19,14 @@ z=\mathcal K(ee^{\mathsf T})+C^{\mathsf T}\widetilde e
 -H_s^{\mathsf T}(s\otimes e).
 ```
 
-With independent encryption coordinates of common discrete-Gaussian variance $v$,
+With independent encryption coordinates of common discrete-Gaussian variance $`v`$,
 
 ```math
 \mathrm{Cov}(z)
 =C_K+vC^{\mathsf T}C+v^2H_s^{\mathsf T}H_s.
 ```
 
-Here $C_K$ and $C$ are known from the keys and the exact noise moments. Normalizing by $v$, estimating the covariance, subtracting the known terms, and rounding recovers the integer matrix $H_s^{\mathsf T}H_s$. This determines $\ker H_s$ without recovering $H_s$.
+Here $`C_K`$ and $`C`$ are known from the keys and the exact noise moments. Normalizing by $`v`$, estimating the covariance, subtracting the known terms, and rounding recovers the integer matrix $`H_s^{\mathsf T}H_s`$. This determines $`\ker H_s`$ without recovering $`H_s`$.
 
 The [Gaussian measurement proof](science/gaussian_measurements.md) establishes the required geometry for the full correlated key columns before projection. The [reconstruction proof](science/reconstruction.md) then gives a finite-bit convex procedure, exact integer rounding and an exact residual test.
 
@@ -34,7 +34,7 @@ The [Gaussian measurement proof](science/gaussian_measurements.md) establishes t
 
 | Page | Content |
 |---|---|
-| [Model and access](science/model.md) | Ciphertext expansion, the $p^2$ factor, legal monomial keys and both experiments |
+| [Model and access](science/model.md) | Ciphertext expansion, the $`p^2`$ factor, legal monomial keys and both experiments |
 | [Noise covariance](science/noise_covariance.md) | Exact moments, normalized sample bound, finite precision and Gram rounding |
 | [Gaussian measurements](science/gaussian_measurements.md) | Affine-coset moments, concentration, joint restricted isometry and full-lattice smoothing |
 | [Reconstruction](science/reconstruction.md) | Rational projection, bounded convex feasibility, integer reconstruction and decision |
@@ -44,6 +44,14 @@ The [Gaussian measurement proof](science/gaussian_measurements.md) establishes t
 | [Related work](references/RELATED_WORK.md) | Closest sources, inherited methods and source-access boundaries |
 
 For a first reading, start with the model, theorem and interpretation. For a proof audit, use the [scientific index](science/README.md).
+
+## Learning route
+
+The selected educational anchor is **Chris Peikert, _A Decade of Lattice Cryptography_ (2016)**. The [anchor map](learning/ANCHOR.md) identifies the relevant lattice, Gaussian, LWE and sampling sections and translates their notation into this project.
+
+The [project bridge](learning/BRIDGE.md) follows the argument from legal functional-key observations to covariance, exact kernel recovery, projected measurements and a finite-bit decision. It includes a worked example of nuisance cancellation and explains the additional geometry needed for recovery.
+
+The [30-milestone map](learning/MILESTONES.md) allocates **14 background milestones and 16 narrative milestones**, progressing from the individual objects to the complete scientific claim. The [learning index](learning/README.md) connects the conceptual and proof-reading routes.
 
 ## Reproducible checks
 
