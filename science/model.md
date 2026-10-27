@@ -8,19 +8,19 @@ The attack uses the arithmetic of the ciphertexts and keys. It requires no decry
 
 | Symbol | Meaning |
 |---|---|
-| $\lambda$ | Security parameter |
-| $k$ | Number of message coordinates |
-| $n$ | Number of fresh secret-randomizer coordinates per encryption |
-| $m$ | Number of primary ciphertext/error coordinates |
-| $\widetilde m$ | Number of auxiliary ciphertext/error coordinates |
-| $h=k+n$ | Number of rows of the hidden primary matrix |
-| $q$ | Prime ciphertext modulus |
-| $p$ | Small public scaling integer, coprime to $q$ |
-| $\chi$ | Common encryption Gaussian width in the parameter family studied here |
-| $\sigma$ | Short-preimage Gaussian width |
-| $L$ | Number of exposed, distinct functional-key columns |
+| $`\lambda`$ | Security parameter |
+| $`k`$ | Number of message coordinates |
+| $`n`$ | Number of fresh secret-randomizer coordinates per encryption |
+| $`m`$ | Number of primary ciphertext/error coordinates |
+| $`\widetilde m`$ | Number of auxiliary ciphertext/error coordinates |
+| $`h=k+n`$ | Number of rows of the hidden primary matrix |
+| $`q`$ | Prime ciphertext modulus |
+| $`p`$ | Small public scaling integer, coprime to $`q`$ |
+| $`\chi`$ | Common encryption Gaussian width in the parameter family studied here |
+| $`\sigma`$ | Short-preimage Gaussian width |
+| $`L`$ | Number of exposed, distinct functional-key columns |
 
-For a discrete set $S\subseteq\mathbb R^D$, write
+For a discrete set $`S\subseteq\mathbb R^D`$, write
 
 ```math
 \rho_\sigma(S)=\sum_{z\in S}\exp(-\pi\|z\|_2^2/\sigma^2),
@@ -28,13 +28,13 @@ For a discrete set $S\subseteq\mathbb R^D$, write
 D_{S,\sigma}(z)=\frac{\exp(-\pi\|z\|_2^2/\sigma^2)}{\rho_\sigma(S)}.
 ```
 
-Widths use the lattice-cryptography convention: a continuous Gaussian with the same density has variance $\sigma^2/(2\pi)$ in each coordinate. The exact variance of $D_{\mathbb Z,\chi}$ is denoted by $v_\chi$; it is not silently replaced by its continuous value.
+Widths use the lattice-cryptography convention: a continuous Gaussian with the same density has variance $`\sigma^2/(2\pi)`$ in each coordinate. The exact variance of $`D_{\mathbb Z,\chi}`$ is denoted by $`v_\chi`$; it is not silently replaced by its continuous value.
 
-Vectors are columns. Tensor indices use the explicitly displayed order; an $m^2$-vector indexed by $(i,j)$ is identified with an $m\times m$ matrix having that entry. Thus $(e\otimes e)^{\mathsf T}\mathrm{vec}(K)=e^{\mathsf T}Ke$. No symmetry of the sampled $K$ is assumed. The inner product on matrices is the Frobenius inner product. For a residue modulo odd $q$, $\mathrm{bal}_q$ denotes its representative in $(-q/2,q/2)$.
+Vectors are columns. Tensor indices use the explicitly displayed order; an $`m^2`$-vector indexed by $`(i,j)`$ is identified with an $`m\times m`$ matrix having that entry. Thus $`(e\otimes e)^{\mathsf T}\mathrm{vec}(K)=e^{\mathsf T}Ke`$. No symmetry of the sampled $`K`$ is assumed. The inner product on matrices is the Frobenius inner product. For a residue modulo odd $`q`$, $`\mathrm{bal}_q`$ denotes its representative in $`(-q/2,q/2)`$.
 
 ## 2. The public key columns and hidden extension
 
-Let $S=[I_k;0_{n\times k}]$. The hidden setup matrices have dimensions
+Let $`S=[I_k;0_{n\times k}]`$. The hidden setup matrices have dimensions
 
 ```math
 A\in\mathbb Z_q^{h\times m},\quad
@@ -63,7 +63,7 @@ satisfying
 \end{aligned}
 ```
 
-Here $C$ denotes the matrix called $\widetilde K$ in [CLÜW26]. The shorter notation separates it from the individual quadratic matrices $K_\ell$ below. This is the degree-two specialization of the paper's extended tensor matrix, with its two mixed blocks written separately.
+Here $`C`$ denotes the matrix called $`\widetilde K`$ in [CLÜW26]. The shorter notation separates it from the individual quadratic matrices $`K_\ell`$ below. This is the degree-two specialization of the paper's extended tensor matrix, with its two mixed blocks written separately.
 
 Theorem 2 of [CLÜW26] permits analysis in an ideal distribution where the hidden setup matrices are uniform and, conditional on them, each complete column
 
@@ -71,11 +71,11 @@ Theorem 2 of [CLÜW26] permits analysis in an ideal distribution where the hidde
 W_\ell=(\mathrm{vec}K_\ell,C_\ell,(F_L)_\ell,(F_R)_\ell)
 ```
 
-is a spherical discrete Gaussian on the appropriate affine preimage lattice coset. Different columns are conditionally independent; their affine targets may differ. The actual output distribution of $(A,\widetilde A,K,C)$ is negligibly close to the corresponding marginal of this ideal full extension. The hidden $F_L,F_R$ are analysis variables supplied by that extension; no claim about an implementation-specific hidden witness is required. The model does **not** assert that the coordinates within a column are independent. The required smoothing property is derived from the published trapdoor bound in [Gaussian measurements](gaussian_measurements.md).
+is a spherical discrete Gaussian on the appropriate affine preimage lattice coset. Different columns are conditionally independent; their affine targets may differ. The actual output distribution of $`(A,\widetilde A,K,C)`$ is negligibly close to the corresponding marginal of this ideal full extension. The hidden $`F_L,F_R`$ are analysis variables supplied by that extension; no claim about an implementation-specific hidden witness is required. The model does **not** assert that the coordinates within a column are independent. The required smoothing property is derived from the published trapdoor bound in [Gaussian measurements](gaussian_measurements.md).
 
 ## 3. Ciphertexts and the observable integer noise
 
-For a message $x\in\mathbb Z^k$, draw independent
+For a message $`x\in\mathbb Z^k`$, draw independent
 
 ```math
 s\leftarrow D_{\mathbb Z^n,\chi},\qquad
@@ -96,7 +96,7 @@ c^{\mathsf T}&=u^{\mathsf T}A+pe^{\mathsf T}\pmod q,\\
 \end{aligned}
 ```
 
-For the functional coefficient vector $y$, the key is $(Ky,Cy)$. Multiplying out the ciphertext and using the three preimage equations gives
+For the functional coefficient vector $`y`$, the key is $`(Ky,Cy)`$. Multiplying out the ciphertext and using the three preimage equations gives
 
 ```math
 (c\otimes c)^{\mathsf T}Ky+\widetilde c^{\mathsf T}Cy
@@ -110,9 +110,9 @@ z_y=(e\otimes e)^{\mathsf T}Ky+\widetilde e^{\mathsf T}Cy
  -(u\otimes e)^{\mathsf T}F_Ly-(e\otimes u)^{\mathsf T}F_Ry.
 ```
 
-The factor is exactly $p^2$. Each mixed ciphertext term supplies one factor $p$; its preimage relation supplies the second. This is the concrete content of the target's equations (19), (22), and (28)–(30).
+The factor is exactly $`p^2`$. Each mixed ciphertext term supplies one factor $`p`$; its preimage relation supplies the second. This is the concrete content of the target's equations (19), (22), and (28)–(30).
 
-The published correctness bound chooses $q$ large enough that the integer on the right lies in the balanced interval except with negligible probability. For keys whose authorized function value is known to be zero, the adversary therefore computes
+The published correctness bound chooses $`q`$ large enough that the integer on the right lies in the balanced interval except with negligible probability. For keys whose authorized function value is known to be zero, the adversary therefore computes
 
 ```math
 z_y=\frac{1}{p^2}\mathrm{bal}_q
@@ -125,7 +125,7 @@ Malformed lifts are rejected. The analysis couples the actual observations to th
 
 The selective IND-CPA game in Figure 1 of [CLÜW26] allows the adversary to specify polynomially many known plaintexts and two challenge plaintexts before setup. It receives their ciphertexts and can request functional keys whose functions agree on both challenge messages.
 
-Choose every training message to be $0$, and challenge messages
+Choose every training message to be $`0`$, and challenge messages
 
 ```math
 x_0=0,\qquad x_1=e_1.
@@ -137,7 +137,7 @@ Request the distinct monomial functions
 \{x_i x_j:1\le i\le j\le k,\ (i,j)\ne(1,1)\}.
 ```
 
-There are $L=k(k+1)/2-1$ such functions, and every one evaluates to zero on both challenges. Each has coefficient norm one, so message and function bounds equal to one suffice. Using only upper-triangular monomials avoids counting two representations of the same polynomial as different functional queries.
+There are $`L=k(k+1)/2-1`$ such functions, and every one evaluates to zero on both challenges. Each has coefficient norm one, so message and function bounds equal to one suffice. Using only upper-triangular monomials avoids counting two representations of the same polynomial as different functional queries.
 
 Restrict all key matrices to these columns and define
 
@@ -145,7 +145,7 @@ Restrict all key matrices to these columns and define
 H_{a,i,\ell}=(F_L)_{(a,i),\ell}+(F_R)_{(i,a),\ell}.
 ```
 
-Let $H_s\in\mathbb Z^{nm\times L}$ contain the $n$ secret-randomizer rows, and let $J\in\mathbb Z^{m\times L}$ contain the first message row. The exposed noise vector is then
+Let $`H_s\in\mathbb Z^{nm\times L}`$ contain the $`n`$ secret-randomizer rows, and let $`J\in\mathbb Z^{m\times L}`$ contain the first message row. The exposed noise vector is then
 
 ```math
 z=\mathcal K(ee^{\mathsf T})+C^{\mathsf T}\widetilde e
@@ -154,13 +154,13 @@ z=\mathcal K(ee^{\mathsf T})+C^{\mathsf T}\widetilde e
 \mathcal K(X)_\ell=\langle K_\ell,X\rangle_F,
 ```
 
-for challenge bit $b\in\{0,1\}$. Training observations have $b=0$. Fresh randomness is independent across encryptions, while the key matrices are fixed.
+for challenge bit $`b\in\{0,1\}`$. Training observations have $`b=0`$. Fresh randomness is independent across encryptions, while the key matrices are fixed.
 
 ## 5. Direct tensor-assumption interpretation
 
-In Figure 3 of [CLÜW26], the adversary is given all $k^2$ key columns. It may choose all auxiliary messages and the challenge parameter $x^*$ to be zero. In experiment zero, both auxiliary and challenge ciphertexts use the same $n$ secret coordinates. In experiment one, auxiliary ciphertexts use $(0_k;s;0)$ and the challenge uses $(0_k;s;1)$ in a hidden matrix with one extra row.
+In Figure 3 of [CLÜW26], the adversary is given all $`k^2`$ key columns. It may choose all auxiliary messages and the challenge parameter $`x^*`$ to be zero. In experiment zero, both auxiliary and challenge ciphertexts use the same $`n`$ secret coordinates. In experiment one, auxiliary ciphertexts use $`(0_k;s;0)`$ and the challenge uses $`(0_k;s;1)`$ in a hidden matrix with one extra row.
 
-Consequently both experiments have exactly the displayed observation model: the second experiment has the additional $J^{\mathsf T}e$ term. Its underlying preimage lattice is different, but the same uniform smoothing and concentration bounds apply separately to both distributions. The [parameter family](parameters.md) includes sufficient slack for this extra row. This gives a direct distinguisher for the degree-two assumption as well as the permitted-key FE interpretation.
+Consequently both experiments have exactly the displayed observation model: the second experiment has the additional $`J^{\mathsf T}e`$ term. Its underlying preimage lattice is different, but the same uniform smoothing and concentration bounds apply separately to both distributions. The [parameter family](parameters.md) includes sufficient slack for this extra row. This gives a direct distinguisher for the degree-two assumption as well as the permitted-key FE interpretation.
 
 ## 6. Scope of the model
 

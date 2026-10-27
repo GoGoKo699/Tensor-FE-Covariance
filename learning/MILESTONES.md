@@ -23,7 +23,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** What information does an integer linear relation retain after reduction modulo a public integer?
 
-**Understanding target:** Interpret matrix-vector products over integers and modulo $q$, distinguish a residue from an integer representative, and explain when a balanced representative recovers a bounded integer. Distinguish the numerical magnitude of an integer from the number of bits used to encode it.
+**Understanding target:** Interpret matrix-vector products over integers and modulo $`q`$, distinguish a residue from an integer representative, and explain when a balanced representative recovers a bounded integer. Distinguish the numerical magnitude of an integer from the number of bits used to encode it.
 
 **Dependencies and story role:** None. This introduces the arithmetic objects and size conventions used by every later observation and runtime statement.
 
@@ -51,7 +51,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** What does a Gaussian width specify when the random variable takes integer values?
 
-**Understanding target:** Interpret weights proportional to $\exp(-\pi x^2/\chi^2)$, their normalization and their tail behavior. Distinguish the width $\chi$ from the exact variance $v_\chi$, and distinguish the encryption width $\chi$ from the short-preimage width $\sigma$.
+**Understanding target:** Interpret weights proportional to $`\exp(-\pi x^2/\chi^2)`$, their normalization and their tail behavior. Distinguish the width $`\chi`$ from the exact variance $`v_\chi`$, and distinguish the encryption width $`\chi`$ from the short-preimage width $`\sigma`$.
 
 **Dependencies and story role:** M01–M02. The geometric support now carries the probability laws used for both encryption errors and key columns.
 
@@ -107,7 +107,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** What useful information about a matrix survives when only its Gram matrix is known?
 
-**Understanding target:** Interpret $G=H^{\mathsf T}H$ through inner products and positive semidefiniteness, derive $\ker G=\ker H$, and explain orthogonal projection onto a common kernel. Distinguish identifying a nuisance subspace from identifying a particular hidden matrix factor.
+**Understanding target:** Interpret $`G=H^{\mathsf T}H`$ through inner products and positive semidefiniteness, derive $`\ker G=\ker H`$, and explain orthogonal projection onto a common kernel. Distinguish identifying a nuisance subspace from identifying a particular hidden matrix factor.
 
 **Dependencies and story role:** M01–M02. Pairwise numerical information is organized into a geometric object that supports exact elimination.
 
@@ -121,7 +121,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** How does a quadratic expression become a linear measurement of a matrix?
 
-**Understanding target:** Connect $e\otimes e$, $ee^{\mathsf T}$ and $e^{\mathsf T}Ke$. Explain the Frobenius inner product, the role of symmetrizing a measurement matrix, and why the lifted unknown is a positive-semidefinite matrix of rank at most one.
+**Understanding target:** Connect $`e\otimes e`$, $`ee^{\mathsf T}`$ and $`e^{\mathsf T}Ke`$. Explain the Frobenius inner product, the role of symmetrizing a measurement matrix, and why the lifted unknown is a positive-semidefinite matrix of rank at most one.
 
 **Dependencies and story role:** M01 and M07. The algebra introduces the structured unknown that remains after nuisance elimination.
 
@@ -221,7 +221,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** Which many-key observation family agrees on the challenge messages while retaining useful joint information?
 
-**Understanding target:** Explain the choices $x_0=0$ and $x_1=e_1$, zero training messages, and the distinct monomials $x_ix_j$ with $i\le j$ except $x_1^2$. Derive the count $L=k(k+1)/2-1$ and identify why every requested function is admissible.
+**Understanding target:** Explain the choices $`x_0=0`$ and $`x_1=e_1`$, zero training messages, and the distinct monomials $`x_ix_j`$ with $`i\le j`$ except $`x_1^2`$. Derive the count $`L=k(k+1)/2-1`$ and identify why every requested function is admissible.
 
 **Dependencies and story role:** M08, M13 and M14. The general security interface becomes a concrete observation design.
 
@@ -235,7 +235,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** What integer does ciphertext arithmetic expose for each zero-output functional key?
 
-**Understanding target:** Follow the quadratic expansion and the preimage relations to the exact factor $p^2$. Identify the known quadratic term, the auxiliary linear term, the hidden bilinear term and the extra challenge term in the observation model. State the bound under which balanced lifting returns this integer.
+**Understanding target:** Follow the quadratic expansion and the preimage relations to the exact factor $`p^2`$. Identify the known quadratic term, the auxiliary linear term, the hidden bilinear term and the extra challenge term in the observation model. State the bound under which balanced lifting returns this integer.
 
 **Dependencies and story role:** M01, M08, M12 and M15. The observation design is reduced to a precise algebraic signal model.
 
@@ -249,7 +249,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** Which part of the zero-message covariance contains the hidden mixed coefficients?
 
-**Understanding target:** Derive the decomposition $\mathrm{Cov}(z)=C_K+vC^{\mathsf T}C+v^2G$, where $G=H_s^{\mathsf T}H_s$. Explain the vanishing cross terms, the known mean, the off-diagonal symmetrization of $K_\ell$, and the discrete fourth-moment correction inside $C_K$.
+**Understanding target:** Derive the decomposition $`\mathrm{Cov}(z)=C_K+vC^{\mathsf T}C+v^2G`$, where $`G=H_s^{\mathsf T}H_s`$. Explain the vanishing cross terms, the known mean, the off-diagonal symmetrization of $`K_\ell`$, and the discrete fourth-moment correction inside $`C_K`$.
 
 **Dependencies and story role:** M03, M05, M07 and M16. The algebraic observation is converted into a population identity containing an integer invariant.
 
@@ -263,7 +263,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** How can finitely many observations recover an integer Gram exactly when the encryption noise is superpolynomial in magnitude?
 
-**Understanding target:** Connect normalization, standardized-moment bounds and median-of-means estimation to entrywise error below $1/2$. Account for certified computation of the discrete moments using dual theta sums, the finite-arithmetic budget and rounding. Track the common known Gaussian law and polynomial short-key bound, and explain why the sample schedule can be fixed from public bounds before setup.
+**Understanding target:** Connect normalization, standardized-moment bounds and median-of-means estimation to entrywise error below $`1/2`$. Account for certified computation of the discrete moments using dual theta sums, the finite-arithmetic budget and rounding. Track the common known Gaussian law and polynomial short-key bound, and explain why the sample schedule can be fixed from public bounds before setup.
 
 **Dependencies and story role:** M03–M06, M15 and M17. The population identity becomes an efficient statistical procedure with explicit precision and failure guarantees.
 
@@ -277,7 +277,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** How does the learned Gram remove hidden bilinear noise from a new observation?
 
-**Understanding target:** Construct the orthogonal projector onto $\ker(G+C^{\mathsf T}C)=\ker H_s\cap\ker C$ using exact rational linear algebra. Explain why this removes both nuisance terms and why recovering a factor $H_s$ is unnecessary. Identify the remaining need to establish useful geometry for the projected quadratic measurements.
+**Understanding target:** Construct the orthogonal projector onto $`\ker(G+C^{\mathsf T}C)=\ker H_s\cap\ker C`$ using exact rational linear algebra. Explain why this removes both nuisance terms and why recovering a factor $`H_s`$ is unnecessary. Identify the remaining need to establish useful geometry for the projected quadratic measurements.
 
 **Dependencies and story role:** M07, M16 and M18. The learned statistic is turned into an operation on challenge data.
 
@@ -319,7 +319,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** What geometric distinction remains between the two challenge cases after nuisance projection?
 
-**Understanding target:** Obtain the projected lower bound by taking an infimum over nuisance vectors. Explain why the zero case is a measurement of $ee^{\mathsf T}$, while the alternative contains a residual term separated from every symmetric rank-at-most-one fit. Distinguish this rank-two separation argument from the higher RIP order used for reconstruction.
+**Understanding target:** Obtain the projected lower bound by taking an infimum over nuisance vectors. Explain why the zero case is a measurement of $`ee^{\mathsf T}`$, while the alternative contains a residual term separated from every symmetric rank-at-most-one fit. Distinguish this rank-two separation argument from the higher RIP order used for reconstruction.
 
 **Dependencies and story role:** M08–M09, M16, M19 and M21. Projection and joint geometry combine into the decisive structural separation.
 
@@ -361,7 +361,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** How does a small matrix-reconstruction error become a sound distinction between the two experiments?
 
-**Understanding target:** Explain why Frobenius error below $1/2$ permits exact entrywise recovery of the integer matrix $ee^{\mathsf T}$. Follow the rejection of rounded rank greater than one and the final rational residual comparison. Identify why the alternative bound applies to every candidate and why $e=0$ remains an explicit exception.
+**Understanding target:** Explain why Frobenius error below $`1/2`$ permits exact entrywise recovery of the integer matrix $`ee^{\mathsf T}`$. Follow the rejection of rounded rank greater than one and the final rational residual comparison. Identify why the alternative bound applies to every candidate and why $`e=0`$ remains an explicit exception.
 
 **Dependencies and story role:** M08, M22–M24. The geometric and computational arguments become a complete decision rule.
 
@@ -373,7 +373,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How do the separate statistical and geometric guarantees imply advantage $1-\mathrm{negl}(\lambda)$ in the permitted experiment?
+**Central question:** How do the separate statistical and geometric guarantees imply advantage $`1-\mathrm{negl}(\lambda)`$ in the permitted experiment?
 
 **Understanding target:** Combine setup replacement, key tails, exact Gram learning, joint RIP, correct lifting and the challenge norm bound in one failure ledger. Include the zero-error event and explain why a union bound needs no independence among these events. Keep moment identities in the unwrapped model and transfer observations through a separate coupling bound.
 
@@ -389,7 +389,7 @@ Dependencies name only earlier milestones. Source pointers distinguish the found
 
 **Central question:** Can the sampling, measurement, correctness and resource requirements hold simultaneously within the source construction's numerical constraints?
 
-**Understanding target:** Follow the explicit family with $k=\lambda^2$ and $T=2^{\lceil\log_2\lambda\rceil^2}$. Compare the number of keys with the nuisance dimension, check smoothing and lifting slack, and explain how polynomial total cost coexists with superpolynomial noise and modulus. Interpret the compactness bound and the sufficiently-large-parameter qualification.
+**Understanding target:** Follow the explicit family with $`k=\lambda^2`$ and $`T=2^{\lceil\log_2\lambda\rceil^2}`$. Compare the number of keys with the nuisance dimension, check smoothing and lifting slack, and explain how polynomial total cost coexists with superpolynomial noise and modulus. Interpret the compactness bound and the sufficiently-large-parameter qualification.
 
 **Dependencies and story role:** M18, M20–M21, M24 and M26. The theorem's hypotheses are shown to describe a nonempty regime.
 

@@ -24,19 +24,19 @@ Use these sections when the corresponding object appears in the [milestone map](
 
 | Source convention or object | Project notation and meaning |
 |---|---|
-| A Gaussian parameter often written $s$ | The short-key width is $\sigma$; the encryption width is $\chi$. Here $s$ itself denotes a fresh randomizer vector. |
-| An LWE error distribution written $\chi$ in §4.2 | Here $\chi$ is a numerical width, and the coordinate distribution is $D_{\mathbb Z,\chi}$. |
-| The lattice Gaussian width convention | The same convention is used. Its continuous coordinate variance is $s^2/(2\pi)$; the exact discrete variance is a separate quantity $v_\chi$. |
+| A Gaussian parameter often written $`s`$ | The short-key width is $`\sigma`$; the encryption width is $`\chi`$. Here $`s`$ itself denotes a fresh randomizer vector. |
+| An LWE error distribution written $`\chi`$ in §4.2 | Here $`\chi`$ is a numerical width, and the coordinate distribution is $`D_{\mathbb Z,\chi}`$. |
+| The lattice Gaussian width convention | The same convention is used. Its continuous coordinate variance is $`s^2/(2\pi)`$; the exact discrete variance is a separate quantity $`v_\chi`$. |
 | An affine lattice coset and its Gaussian sampler | A complete key column lies in an affine preimage coset. The congruence constraints may correlate its coordinates. |
-| An LWE dimension or sample count | Project dimensions $k,n,m,\widetilde m,L$ have their own roles, listed in [Model §1](../science/model.md#1-parameters-and-conventions). Equal symbols alone do not identify two experiments. |
+| An LWE dimension or sample count | Project dimensions $`k,n,m,\widetilde m,L`$ have their own roles, listed in [Model §1](../science/model.md#1-parameters-and-conventions). Equal symbols alone do not identify two experiments. |
 
-In this convention, the unnormalized Gaussian weight at a vector $z$ is
+In this convention, the unnormalized Gaussian weight at a vector $`z`$ is
 
 ```math
 \exp(-\pi\|z\|_2^2/s^2).
 ```
 
-The project also uses $\alpha=\sigma\sqrt{L/(2\pi)}$ for the measurement normalization. This $\alpha$ is distinct from a relative LWE error rate in the survey. The full-column dimension bound is $N_{\rm col}$; the structured measurement domain has the smaller dimension $D=m(m+1)/2+d_0$.
+The project also uses $`\alpha=\sigma\sqrt{L/(2\pi)}`$ for the measurement normalization. This $`\alpha`$ is distinct from a relative LWE error rate in the survey. The full-column dimension bound is $`N_{\rm col}`$; the structured measurement domain has the smaller dimension $`D=m(m+1)/2+d_0`$.
 
 Two assumptions need particular care. A spherical Gaussian weight on a constrained lattice coset does not make the coordinates independent. Also, a sampling theorem's closeness in statistical distance must be applied to the actual output marginal being observed. [Model §2](../science/model.md#2-the-public-key-columns-and-hidden-extension) states that marginal precisely; [Gaussian measurements](../science/gaussian_measurements.md) retains the resulting dependencies.
 
