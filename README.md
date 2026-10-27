@@ -45,6 +45,14 @@ The [Gaussian measurement proof](science/gaussian_measurements.md) establishes t
 
 For a first reading, start with the model, theorem and interpretation. For a proof audit, use the [scientific index](science/README.md).
 
+## Learning route
+
+The selected educational anchor is **Chris Peikert, _A Decade of Lattice Cryptography_ (2016)**. The [anchor map](learning/ANCHOR.md) identifies the relevant lattice, Gaussian, LWE and sampling sections and translates their notation into this project.
+
+The [project bridge](learning/BRIDGE.md) follows the argument from legal functional-key observations to covariance, exact kernel recovery, projected measurements and a finite-bit decision. It includes a worked example of nuisance cancellation and explains the additional geometry needed for recovery.
+
+The [30-milestone map](learning/MILESTONES.md) allocates **14 background milestones and 16 narrative milestones**, progressing from the individual objects to the complete scientific claim. The [learning index](learning/README.md) connects the conceptual and proof-reading routes.
+
 ## Reproducible checks
 
 Run the four dependency-free checks with Python 3:

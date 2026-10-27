@@ -8,6 +8,14 @@ Classical polynomial-time distinction for the specified degree-two family of Cin
 
 No claim about ordinary LWE hardness, every allowed parameter choice, higher degrees, or practical attack costs.
 
+## Reading by intention
+
+- Story: [Project bridge](learning/BRIDGE.md), then [Main theorem](science/attack.md) and [Interpretation](science/interpretation.md). The bridge includes a small exact projection example and the steps needed to turn kernel recovery into a decision.
+- Study: [Learning index](learning/README.md), [Peikert anchor and notation map](learning/ANCHOR.md), and [30 milestones](learning/MILESTONES.md). The single anchor is A Decade of Lattice Cryptography (2016); the map has 14 background and 16 narrative milestones.
+- Theorem and proof dependencies: [Scientific index](science/README.md), then the authoritative topic pages below. The bridge explains these results without replacing their hypotheses.
+- Reproduction: [Verification](verification/README.md), followed by python3 verification/run_all.py from the repository root.
+- Attribution and prior boundaries: [Related work](references/RELATED_WORK.md) and [Bibliography](references/references.bib).
+
 ## Authoritative scientific notes
 
 - [Model](science/model.md): definitions, ciphertext expansion, permitted access.

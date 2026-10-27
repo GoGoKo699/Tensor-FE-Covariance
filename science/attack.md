@@ -9,7 +9,7 @@ The result combines exact recovery of a hidden integer Gram matrix with stable r
 ```math
 L=\frac{k(k+1)}2-1,\qquad
 d_0=nm+\widetilde m+m,\qquad
-D=m^2+\widetilde m+2(k+n+1)m.
+N_{\rm col}=m^2+\widetilde m+2(k+n+1)m.
 ```
 
 Assume the following properties, all of which hold for the explicit asymptotic family in [Parameters](parameters.md).
@@ -19,11 +19,13 @@ Assume the following properties, all of which hold for the explicit asymptotic f
 3. For a sufficiently large absolute constant $C$, the number of queried columns satisfies
 
    ```math
-   L\ge C\big[(10m+d_0)\log(2DL)+\lambda\big].
+   L\ge C\big[(10m+d_0)\log(2N_{\rm col}L)+\lambda\big].
    ```
 
-4. The dimensions and $\sigma$ are polynomially bounded in $\lambda$. The common encryption width satisfies $\chi\ge1$, with $\log\chi$ polynomially bounded; $m\ge\lambda$. The prescribed discrete Gaussian moments are computable to polynomial-bit precision.
+4. The dimensions and $\sigma$ are polynomially bounded in $\lambda$. The width $\sigma$ is a rational input or admits polynomial-time certified interval approximation, so the measurement normalization can be computed to the required relative precision. The common encryption width satisfies $\chi\ge1$, with $\log\chi$ polynomially bounded; $m\ge\lambda$. The prescribed discrete Gaussian moments are computable to polynomial-bit precision.
 5. The published correctness bounds give negligible failure of the balanced integer lift for every polynomial number of observations used here. All modulus and input bit lengths are polynomially bounded. A public encoded radius $R_0$ bounds the challenge $\|e\|_2^2$ except with negligible probability, with $\log R_0$ polynomially bounded.
+
+Here $N_{\rm col}$ bounds the full preimage-column dimension, including the extra row used by the direct assumption experiment. It also dominates the structured-domain dimension $D=m(m+1)/2+d_0$ in [Gaussian measurements](gaussian_measurements.md), so the displayed measurement condition suffices for that theorem.
 
 There is a classical probabilistic polynomial-time adversary making $L$ valid functional-key queries and polynomially many known-zero encryption observations such that
 
