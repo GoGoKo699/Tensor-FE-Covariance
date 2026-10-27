@@ -35,7 +35,7 @@ Define the normalized linear map
 [\mathcal A(X,z)]_\ell
 =\frac{\sqrt{2\pi}}{\sigma\sqrt L}
   \langle W_\ell,\iota(X,z)\rangle.
-\tag{1}
+\\qquad\\text{(1)}
 ```
 
 Then the probability that there exists a pair with $\mathrm{rank}(X)\le r$ for which
@@ -44,7 +44,7 @@ Then the probability that there exists a pair with $\mathrm{rank}(X)\le r$ for w
 (1-\delta)(\|X\|_F^2+\|z\|_2^2)
 \le \|\mathcal A(X,z)\|_2^2
 \le (1+\delta)(\|X\|_F^2+\|z\|_2^2)
-\tag{2}
+\\qquad\\text{(2)}
 ```
 
 fails is at most
@@ -55,7 +55,7 @@ e^{-L}
 \kappa\log\frac{1000rLD}{\delta}
 -\frac{\delta^2L}{2^{15}}
 \right).
-\tag{3}
+\\qquad\\text{(3)}
 ```
 
 In particular, the sufficient condition
@@ -63,14 +63,14 @@ In particular, the sufficient condition
 ```math
 L\ge 2^{16}\delta^{-2}
 \kappa\log\frac{1000rLD}{\delta}
-\tag{4}
+\\qquad\\text{(4)}
 ```
 
 gives failure probability at most
 
 ```math
 3\exp\!\left(-\frac{\delta^2L}{2^{16}}\right).
-\tag{5}
+\\qquad\\text{(5)}
 ```
 
 Since $\kappa\le 2rm+d_0$, this has the form
@@ -109,7 +109,7 @@ We use the smoothing convention
 =\inf\left\{s>0:
 \sum_{0\ne y\in\Lambda^*}e^{-\pi s^2\|y\|_2^2}
 \le\varepsilon\right\}.
-\tag{6}
+\\qquad\\text{(6)}
 ```
 
 Poisson summation for the Gaussian gives
@@ -121,7 +121,7 @@ Poisson summation for the Gaussian gives
 f_\sigma(c)=
 \sum_{y\in\Lambda^*}
 e^{-\pi\sigma^2\|y\|_2^2}e^{2\pi i\langle y,c\rangle}.
-\tag{7}
+\\qquad\\text{(7)}
 ```
 
 The series and its derivatives converge absolutely. Terms indexed by $y$ and $-y$ show that $f_\sigma(c)$ is real. It is positive because the left-hand side of (7) is positive.
@@ -131,14 +131,14 @@ The smoothing hypothesis implies
 ```math
 \sum_{0\ne y\in\Lambda^*}
 e^{-\pi\sigma^2\|y\|_2^2/2}\le\varepsilon.
-\tag{8}
+\\qquad\\text{(8)}
 ```
 
 In particular, uniformly for every real $c$,
 
 ```math
 1-\varepsilon\le f_\sigma(c)\le1+\varepsilon.
-\tag{9}
+\\qquad\\text{(9)}
 ```
 
 The extra factor $\sqrt2$ in the smoothing hypothesis will control derivatives of (7), not merely its value.
@@ -149,13 +149,13 @@ The extra factor $\sqrt2$ in the smoothing hypothesis will control derivatives o
 
 ```math
 \|\mathbb EW\|_2\le\sigma\varepsilon,
-\tag{10}
+\\qquad\\text{(10)}
 ```
 
 ```math
 \left\|\frac{2\pi}{\sigma^2}\mathbb E[WW^{\mathsf T}]-I_N\right\|_{\rm op}
 \le3\varepsilon,
-\tag{11}
+\\qquad\\text{(11)}
 ```
 
 and
@@ -163,7 +163,7 @@ and
 ```math
 \left\|\frac{2\pi}{\sigma^2}\mathrm{Cov}(W)-I_N\right\|_{\rm op}
 \le5\varepsilon.
-\tag{12}
+\\qquad\\text{(12)}
 ```
 
 If $Y=\sqrt{2\pi}\,W/\sigma$, then every vector $a\in\mathbb R^N$ satisfies
@@ -173,7 +173,7 @@ If $Y=\sqrt{2\pi}\,W/\sigma$, then every vector $a\in\mathbb R^N$ satisfies
 \le \frac{1+\varepsilon}{1-\varepsilon}
 e^{t^2\|a\|_2^2/2}
 \quad(t\in\mathbb R),
-\tag{13}
+\\qquad\\text{(13)}
 ```
 
 and, for $u\ge0$ and $a\ne0$,
@@ -181,7 +181,7 @@ and, for $u\ge0$ and $a\ne0$,
 ```math
 \Pr\{ |\langle Y,a\rangle|\ge u\|a\|_2\}
 \le4e^{-u^2/2}.
-\tag{14}
+\\qquad\\text{(14)}
 ```
 
 These are bounds for the uncentered random variable. No exact-zero-mean assumption is implicit.
@@ -195,7 +195,7 @@ These are bounds for the uncentered random variable. No exact-zero-mean assumpti
      {\rho_\sigma(\Lambda+c)}
 =e^{\sigma^2\|\theta\|_2^2/(4\pi)}
 \frac{f_\sigma(c-\sigma^2\theta/(2\pi))}{f_\sigma(c)}.
-\tag{15}
+\\qquad\\text{(15)}
 ```
 
 Equation (13) follows from (9) after substituting
@@ -224,14 +224,14 @@ and (8) imply
 \|\nabla f_\sigma(c)\|_2
 \le\frac{2\sqrt{\pi/e}}\sigma\varepsilon
 \le\frac{3\varepsilon}\sigma,
-\tag{16}
+\\qquad\\text{(16)}
 ```
 
 ```math
 \|\nabla^2 f_\sigma(c)\|_{\rm op}
 \le\frac{8\pi}{e\sigma^2}\varepsilon
 \le\frac{10\varepsilon}{\sigma^2}.
-\tag{17}
+\\qquad\\text{(17)}
 ```
 
 For example, (17) follows by bounding the operator norm of each rank-one term $yy^{\mathsf T}$ by $\|y\|_2^2$, retaining half its Gaussian exponent for (8).
@@ -241,7 +241,7 @@ Differentiating (15) at $\theta=0$ gives
 ```math
 \mathbb EW=-\frac{\sigma^2}{2\pi}
 \frac{\nabla f_\sigma(c)}{f_\sigma(c)},
-\tag{18}
+\\qquad\\text{(18)}
 ```
 
 ```math
@@ -249,7 +249,7 @@ Differentiating (15) at $\theta=0$ gives
 =\frac{\sigma^2}{2\pi}I_N
 +\frac{\sigma^4}{4\pi^2}
   \frac{\nabla^2 f_\sigma(c)}{f_\sigma(c)}.
-\tag{19}
+\\qquad\\text{(19)}
 ```
 
 The second equation concerns the raw second moment, so there is no squared-gradient term in it. Equations (9), (16), and (18) give
@@ -285,7 +285,7 @@ Then
 ```math
 \left|\frac1L\sum_{\ell=1}^L\mathbb EZ_\ell^2-1\right|
 \le3\varepsilon,
-\tag{20}
+\\qquad\\text{(20)}
 ```
 
 and, for $0<t\le1$,
@@ -296,7 +296,7 @@ and, for $0<t\le1$,
 (Z_\ell^2-\mathbb EZ_\ell^2)\right|\ge t
 \right\}
 \le2e^{-Lt^2/264}.
-\tag{21}
+\\qquad\\text{(21)}
 ```
 
 In particular, when $\varepsilon\le\delta/24$,
@@ -304,7 +304,7 @@ In particular, when $\varepsilon\le\delta/24$,
 ```math
 \Pr\{ |\|\mathcal Av\|_2^2-1|>\delta/4\}
 \le2\exp\left(-\frac{\delta^2L}{2^{15}}\right).
-\tag{22}
+\\qquad\\text{(22)}
 ```
 
 **Proof.** Equation (20) follows from (11) and the isometry of $\iota$. To derive the concentration bound explicitly, (14) implies, for integers $p\ge1$,
@@ -314,7 +314,7 @@ In particular, when $\varepsilon\le\delta/24$,
 =\int_0^\infty 2p u^{2p-1}
   \Pr\{|Z_\ell|>u\}\,du
 \le4\,2^p p!.
-\tag{23}
+\\qquad\\text{(23)}
 ```
 
 Let $X_\ell=Z_\ell^2-\mathbb EZ_\ell^2$. Jensen's inequality and
@@ -323,7 +323,7 @@ $|a-b|^p\le2^{p-1}(|a|^p+|b|^p)$ give
 ```math
 \mathbb E|X_\ell|^p\le4\,4^p p!
 \quad(p\ge2).
-\tag{24}
+\\qquad\\text{(24)}
 ```
 
 Consequently, for $|u|<1/4$, expansion of the exponential, using $\mathbb EX_\ell=0$, gives
@@ -332,7 +332,7 @@ Consequently, for $|u|<1/4$, expansion of the exponential, using $\mathbb EX_\el
 \mathbb E e^{uX_\ell}
 \le1+\frac{64u^2}{1-4|u|}
 \le\exp\left(\frac{64u^2}{1-4|u|}\right).
-\tag{25}
+\\qquad\\text{(25)}
 ```
 
 Independence multiplies these bounds over $\ell$. Chernoff's inequality with
@@ -357,7 +357,7 @@ $\mathcal N\subset\mathcal S_r$ in the $\mathcal V$-norm with
 ```math
 |\mathcal N|\le
 \left(\frac{9\sqrt r}{\eta}\right)^{r(m+1)+d_0}.
-\tag{26}
+\\qquad\\text{(26)}
 ```
 
 **Proof.** Every member of $\mathcal S_r$ has a representation
@@ -399,7 +399,7 @@ Set
 
 ```math
 B=\sqrt{2\bigl(L+\log(4LD)\bigr)}.
-\tag{27}
+\\qquad\\text{(27)}
 ```
 
 A union bound gives
@@ -407,7 +407,7 @@ A union bound gives
 ```math
 \Pr\{\max_{\ell,j}|\langle Y_\ell,\iota e_j\rangle|>B\}
 \le4LD e^{-B^2/2}=e^{-L}.
-\tag{28}
+\\qquad\\text{(28)}
 ```
 
 On the complementary event,
@@ -415,7 +415,7 @@ On the complementary event,
 ```math
 \|\mathcal A\|_{\rm op}
 \le\|\mathcal A\|_F\le B\sqrt D.
-\tag{29}
+\\qquad\\text{(29)}
 ```
 
 Here the operator acts on the **whole** space $\mathcal V$. The bound is crude but prevents a circular restricted-norm argument when passing from a net to all low-rank matrices.
@@ -424,7 +424,7 @@ Use Lemma 4 with
 
 ```math
 \eta=\frac{\delta}{16B\sqrt D}.
-\tag{30}
+\\qquad\\text{(30)}
 ```
 
 For $L,D,r\ge1$,
@@ -438,7 +438,7 @@ For example, $L+\log(4LD)\le5LD$ gives this inequality immediately. Thus
 ```math
 |\mathcal N|\le
 \left(\frac{1000rLD}{\delta}\right)^\kappa.
-\tag{31}
+\\qquad\\text{(31)}
 ```
 
 By (22) and a union bound, outside an event of probability
@@ -458,7 +458,7 @@ On this event and (29), any $v\in\mathcal S_r$ has a net point $v_0$ such that
      +\|\mathcal A\|_{\rm op}\|v-v_0\|_{\mathcal V}
 \le\frac\delta4+\frac\delta{16}
 =\frac{5\delta}{16}.
-\tag{32}
+\\qquad\\text{(32)}
 ```
 
 Squaring (32), and using $\delta\le1/2$, gives
@@ -495,7 +495,7 @@ For $a\in[h]$ and $i\in[m]$, define
 
 ```math
 H_{a,i,\ell}=(F_{01,\ell})_{a,i}+(F_{10,\ell})_{i,a}.
-\tag{33}
+\\qquad\\text{(33)}
 ```
 
 Let $H_s\in\mathbb R^{nm\times L}$ select the rows with $a=k+j$, $j\in[n]$, and let $H_1\in\mathbb R^{m\times L}$ select $a=1$. These two sets of coordinates are disjoint.
@@ -525,14 +525,14 @@ inside the full $W_\ell$ space is exactly
 ```math
 \bigl(\mathrm{vec}X,\ v,
 \mathrm{vec}(C(u,w)),\mathrm{vec}(C(u,w)^{\mathsf T})\bigr).
-\tag{34}
+\\qquad\\text{(34)}
 ```
 
 Its squared norm is
 
 ```math
 \|X\|_F^2+2\|u\|_2^2+\|v\|_2^2+2\|w\|_2^2.
-\tag{35}
+\\qquad\\text{(35)}
 ```
 
 There is no factor-of-two adjustment to the $X$ block: for a symmetric $X$, its full vectorization has squared norm $\|X\|_F^2$. In particular, off-diagonal entries occur twice in that Frobenius norm exactly as they do in the two distinct coordinates of $K_\ell$.
@@ -564,7 +564,7 @@ the conclusion is
 
 ```math
 \le(1+\delta)(\|X\|_F^2+2\|u\|_2^2+\|v\|_2^2+2\|w\|_2^2),
-\tag{36}
+\\qquad\\text{(36)}
 ```
 
 uniformly for symmetric $X$ of rank at most $r$ and all nuisance vectors. Equation (36) is the normalization used by the reconstruction argument.
@@ -581,14 +581,14 @@ This section separates two facts that should not be conflated: a short full-rank
 \eta_\varepsilon(\Gamma)
 \le b\sqrt{\frac{\log(4N(1+1/\varepsilon))}{\pi}}
 \quad(\varepsilon>0).
-\tag{37}
+\\qquad\\text{(37)}
 ```
 
 **Proof.** For any lattice basis with Gram–Schmidt lengths $b_i$, writing its norm in triangular Gram–Schmidt coordinates and summing one integer coordinate at a time gives
 
 ```math
 \rho_t(\Gamma)\le\prod_{i=1}^N\rho_{t/b_i}(\mathbb Z).
-\tag{38}
+\\qquad\\text{(38)}
 ```
 
 At each step, a shifted one-dimensional Gaussian mass is bounded by its mass at zero. This last fact follows immediately from one-dimensional Poisson summation: the Fourier coefficients of the periodized Gaussian are nonnegative, so replacing each cosine by 1 gives its maximum.
@@ -600,7 +600,7 @@ The dual basis, in reverse order, has Gram–Schmidt lengths $1/b_N,\ldots,1/b_1
 \le\prod_{i=1}^N\rho_{b_i/s}(\mathbb Z)
 \le\left(\frac{1+a}{1-a}\right)^N,
 \quad a=e^{-\pi(s/b)^2},
-\tag{39}
+\\qquad\\text{(39)}
 ```
 
 because $\sum_{j\ge1}a^{j^2}\le a/(1-a)$.
@@ -620,7 +620,7 @@ $\Lambda^*\subseteq\Gamma^*$, so
 
 ```math
 \eta_\varepsilon(\Lambda)\le\eta_\varepsilon(\Gamma).
-\tag{40}
+\\qquad\\text{(40)}
 ```
 
 In particular, a short linearly independent set in $\Lambda$ may be used as a basis of its generated sublattice; it need not be a basis of $\Lambda$.
@@ -638,7 +638,7 @@ Then, with $N=N_0+t$ and $\bar b=\max(b,1)$,
 ```math
 \eta_\varepsilon(\Lambda)
 \le\bar b\sqrt{\frac{\log(4N(1+1/\varepsilon))}{\pi}}.
-\tag{41}
+\\qquad\\text{(41)}
 ```
 
 **Proof.** Let $T$ have the short independent vectors as columns. Surjectivity gives an integer matrix $R$ with
@@ -647,7 +647,7 @@ $E_0R=-B\pmod q$. The columns of
 ```math
 \widehat T=
 \begin{pmatrix}T&R\\0&I_t\end{pmatrix}
-\tag{42}
+\\qquad\\text{(42)}
 ```
 
 are independent vectors in $\Lambda$. They generate a full-rank sublattice $\Gamma\subseteq\Lambda$.
@@ -665,7 +665,7 @@ A\otimes A&0&0\\
 A\otimes I_m&pI_{hm}&0\\
 I_m\otimes A&0&pI_{mh}
 \end{pmatrix}.
-\tag{43}
+\\qquad\\text{(43)}
 ```
 
 If $A\in\mathbb F_q^{h\times m}$ has row rank $h$ and $p\ne0$ in $\mathbb F_q$, then $E_0(A)$ is surjective. Indeed, $A\otimes A$ is surjective onto the top block, and the two invertible $pI$ blocks can then set the lower blocks arbitrarily.
@@ -674,7 +674,7 @@ The full sampler lattice is the kernel lattice of $[E_0(A)\ \widetilde A]$, up t
 
 ```math
 b=2(s\sqrt m)^2.
-\tag{44}
+\\qquad\\text{(44)}
 ```
 
 It is sufficient for the present note to impose the explicit width condition
@@ -684,7 +684,7 @@ It is sufficient for the present note to impose the explicit width condition
 \sqrt2\max(b,1)
 \sqrt{\frac{\log(4N(1+1/\varepsilon))}{\pi}},
 \qquad N=m^2+2hm+\widetilde m.
-\tag{45}
+\\qquad\\text{(45)}
 ```
 
 Lemma 6 then gives precisely $\sigma/\sqrt2\ge\eta_\varepsilon(\Lambda)$.
@@ -715,7 +715,7 @@ The published statistical-closeness statement concerns the output marginal $(A,\
 ```math
 \alpha_{\rm good}+\alpha_{\rm samp}
 +3e^{-\delta^2L/2^{16}}
-\tag{46}
+\\qquad\\text{(46)}
 ```
 
 under (4). Smoothing error enters the deterministic second-moment bias; it is not additionally counted as a per-row statistical-distance loss.
@@ -742,7 +742,7 @@ The distance to the nuisance span is
 \|\mathcal A_P(X)\|_2
 =\tau^{-1}\inf_{u,v}
 \|\mathcal M(X,u,v,0)\|_2.
-\tag{47}
+\\qquad\\text{(47)}
 ```
 
 The lower bound in (36), uniform over all $u,v$, and the upper bound with $u=v=0$, show that $\mathcal A_P$ has the same rank-$r$ RIP constants.
@@ -752,7 +752,7 @@ Likewise, if $X_0$ has rank one and $X'$ has rank at most one, then $\mathrm{ran
 ```math
 \left\|\mathcal A_P(X'-X_0)+\tau^{-1}P H_1^{\mathsf T}e\right\|_2
 \ge\sqrt{2(1-\delta)}\,\|e\|_2.
-\tag{48}
+\\qquad\\text{(48)}
 ```
 
 This is the quantitative separation used by the reconstruction test. The proof makes no assertion that entries of $PK_{\rm key}^{\mathsf T}$ are independent or Gaussian.

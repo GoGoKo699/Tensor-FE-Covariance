@@ -15,7 +15,7 @@ Let $m,L\ge1$. Let $\mathrm{Sym}_m$ denote the real symmetric $m\times m$ matric
 ```math
 \mathcal K(X)_\ell=\langle K_\ell,X\rangle_F,
 \qquad X\in\mathrm{Sym}_m.
-\tag{1}
+\\qquad\\text{(1)}
 ```
 
 The matrices $K_\ell$ need not be symmetric. Their symmetric parts define the same map on $\mathrm{Sym}_m$.
@@ -32,7 +32,7 @@ In the notation of [the observation model](model.md), $d_s=nm$ and $d_c=\widetil
 
 ```math
 G=H_s^{\mathsf T}H_s
-\tag{2}
+\\qquad\\text{(2)}
 ```
 
 are available to the decoder. Neither $H_s$ nor $J$ is needed as input.
@@ -44,14 +44,14 @@ The observation is an integer vector of one of the forms
 z_0&=\mathcal K(ee^{\mathsf T})+H_s^{\mathsf T}u+C^{\mathsf T}v,\\
 z_1&=\mathcal K(ee^{\mathsf T})+H_s^{\mathsf T}u+C^{\mathsf T}v-J^{\mathsf T}e,
 \end{aligned}
-\tag{3}
+\\qquad\\text{(3)}
 ```
 
 where $e\in\mathbb Z^m$, while $u,v$ may be arbitrary real vectors consistent with an integer observation. No distributional property of $u,v$ is used in this note. A public integer $R_0\ge1$ bounds
 
 ```math
 \|e\|_2^2\le R_0.
-\tag{4}
+\\qquad\\text{(4)}
 ```
 
 All supplied integers and rationals use binary encoding. Write $B$ for the total input encoding length, including $K_\ell,C,G,z$, the rational scale below, and $R_0$. An algorithm polynomial in $B,m,L,d_c$ may have a large polynomial exponent; no practical resource estimate is asserted here.
@@ -68,7 +68,7 @@ The decoder receives a positive rational scale $a$. Assume that, for every symme
 &\le
 (1+\delta)\bigl(\|X\|_F^2+2\|u\|_2^2+\|v\|_2^2+2\|w\|_2^2\bigr),
 \end{aligned}
-\tag{5}
+\\qquad\\text{(5)}
 ```
 
 with $\delta\le1/100$. If $m<10$, the rank bound simply includes all symmetric matrices of the relevant ranks. The factors two correspond to adding two disjoint Gaussian preimage blocks in each mixed term.
@@ -81,14 +81,14 @@ In the Gaussian preimage application the natural scale is
 
 ```math
 a_* = \frac{\sqrt{2\pi}}{\sigma\sqrt L}.
-\tag{6}
+\\qquad\\text{(6)}
 ```
 
 The algorithm never needs this irrational number exactly. If the unrounded joint RIP holds at scale $a_*$ with distortion at most $1/200$, choose a positive rational $a$ satisfying
 
 ```math
 \left|a/a_*-1\right|\le 1/1000.
-\tag{7}
+\\qquad\\text{(7)}
 ```
 
 Then (5) holds with distortion at most $1/100$, because
@@ -121,14 +121,14 @@ Form the public integer matrix
 
 ```math
 Q_G=G+C^{\mathsf T}C.
-\tag{8}
+\\qquad\\text{(8)}
 ```
 
 When (2) holds,
 
 ```math
 \ker Q_G=\ker H_s\cap\ker C,
-\tag{9}
+\\qquad\\text{(9)}
 ```
 
 because $x^{\mathsf T}Q_G x=\|H_s x\|_2^2+\|C x\|_2^2$. Let $\Pi$ be the orthogonal projector onto this kernel.
@@ -137,7 +137,7 @@ The projector is rational and can be computed exactly. Choose a maximal independ
 
 ```math
 \Pi=I-V^{\mathsf T}(VV^{\mathsf T})^{-1}V.
-\tag{10}
+\\qquad\\text{(10)}
 ```
 
 For $Q_G=0$, use $\Pi=I$. Fraction-free elimination finds $V$ and the inverse in polynomial bit complexity. If entries of $Q_G$ have at most $b_Q$ bits, entries of $VV^{\mathsf T}$ have $O(b_Q+\log L)$ bits, and Hadamard bounds its determinant and cofactors by integers with $O(L(b_Q+\log L))$ bits. Formula (10) therefore has polynomial numerator and denominator lengths. Small nonzero singular values cause no unbounded-precision issue: a rational matrix of bounded bit length has determinant/minor bounds of exactly the size accounted for here.
@@ -149,7 +149,7 @@ Define the rational map and data
 ```math
 \mathcal A(X)=a\Pi\mathcal K(X),
 \qquad b=a\Pi z.
-\tag{11}
+\\qquad\\text{(11)}
 ```
 
 The projector's range is orthogonal to $\mathrm{im}H_s^{\mathsf T}+\mathrm{im}C^{\mathsf T}$. Consequently,
@@ -157,7 +157,7 @@ The projector's range is orthogonal to $\mathrm{im}H_s^{\mathsf T}+\mathrm{im}C^
 ```math
 \|a\Pi[\mathcal K(X)+J^{\mathsf T}w]\|_2
 =\inf_{u,v}\|a[\mathcal K(X)+H_s^{\mathsf T}u+C^{\mathsf T}v+J^{\mathsf T}w]\|_2.
-\tag{12}
+\\qquad\\text{(12)}
 ```
 
 Applying (5) uniformly before this infimum gives two facts.
@@ -166,7 +166,7 @@ Applying (5) uniformly before this infimum gives two facts.
 
 ```math
 0.99\|X\|_F^2\le\|\mathcal A(X)\|_2^2\le1.01\|X\|_F^2.
-\tag{13}
+\\qquad\\text{(13)}
 ```
 
 **Alternative-branch separation.** For every symmetric matrix $Y$ of rank at most one, an observation from the second line of (3) satisfies
@@ -177,7 +177,7 @@ Applying (5) uniformly before this infimum gives two facts.
 &\ge0.99\bigl(\|Y-ee^{\mathsf T}\|_F^2+2\|e\|_2^2\bigr)\\
 &\ge1.98\|e\|_2^2.
 \end{aligned}
-\tag{14}
+\\qquad\\text{(14)}
 ```
 
 Here $\mathrm{rank}(Y-ee^{\mathsf T})\le2$. If the integer vector $e$ is nonzero, the squared residual exceeds one. This soundness statement holds for every rank-one candidate, independently of how it was produced.
@@ -187,14 +187,14 @@ An explicit bound for the unrestricted operator norm will be useful. Set
 ```math
 K_{\max}=\max_{\ell,i,j}|(K_\ell)_{ij}|,
 \qquad M=1+\lceil a m L K_{\max}\rceil.
-\tag{15}
+\\qquad\\text{(15)}
 ```
 
 Then $M\ge1$ is an encoded integer and
 
 ```math
 \|\mathcal A\|_{F\to2}\le a m\sqrt L K_{\max}\le M.
-\tag{16}
+\\qquad\\text{(16)}
 ```
 
 This global norm bound is derived from the input, not from low-rank RIP.
@@ -209,14 +209,14 @@ The following proof is a quantitative form of the usual nuclear-norm tangent-spa
 \|\mathcal A(\widehat X-X_0)\|_2\le\eta,
 \qquad
 \|\widehat X\|_*\le\|X_0\|_*+\varepsilon,
-\tag{17}
+\\qquad\\text{(17)}
 ```
 
 then
 
 ```math
 \|\widehat X-X_0\|_F\le3.1\eta+2\varepsilon.
-\tag{18}
+\\qquad\\text{(18)}
 ```
 
 **Proof.** Write $H=\widehat X-X_0$. If $X_0\ne0$, let $P_0$ project onto its one-dimensional image and put
@@ -230,7 +230,7 @@ Then $\mathrm{rank}H_0\le2$, and $H_0,H_c$ are Frobenius-orthogonal. The nuclear
 ```math
 \|H_c\|_*\le\|H_0\|_*+\varepsilon
 \le\sqrt2\|H_0\|_F+\varepsilon.
-\tag{19}
+\\qquad\\text{(19)}
 ```
 
 For $X_0=0$, take $P_0=0$, $H_0=0$; the same inequality holds.
@@ -241,7 +241,7 @@ Split the eigenvalues of $H_c$, in decreasing absolute value, into blocks of at 
 \sum_{j\ge2}\|H_j\|_F
 \le\frac{\|H_c\|_*}{\sqrt8}
 \le\frac12\|H_0\|_F+\frac\varepsilon{\sqrt8}.
-\tag{20}
+\\qquad\\text{(20)}
 ```
 
 To check the first inequality, every absolute eigenvalue in block $j$ is at most the average absolute eigenvalue of the preceding full block; sum the resulting estimates.
@@ -252,7 +252,7 @@ Set $T=H_0+H_1$. It has rank at most ten and satisfies $\|H_0\|_F\le\|T\|_F$. Th
 \|\mathcal A(H)\|_2
 \ge\left(\sqrt{0.99}-\tfrac12\sqrt{1.01}\right)\|T\|_F
 -\sqrt{1.01}\frac\varepsilon{\sqrt8}.
-\tag{21}
+\\qquad\\text{(21)}
 ```
 
 Also $\|H\|_F\le1.5\|T\|_F+\varepsilon/\sqrt8$. The coefficient in parentheses in (21) exceeds $0.49$. Substitution yields (18), with deliberately loose constants. ∎
@@ -270,7 +270,7 @@ Fix
 \qquad R=2(R_0+1),
 \qquad
 r=\min\left\{\frac\varepsilon{64m},\frac\eta{16M}\right\}.
-\tag{22}
+\\qquad\\text{(22)}
 ```
 
 For a rational level $t\in[0,R]$, define
@@ -281,7 +281,7 @@ U,V\succeq0,\quad
 \mathrm{tr}(U+V)\le t,\quad
 \|\mathcal A(U-V)-b\|_2\le\eta
 \right\}.
-\tag{23}
+\\qquad\\text{(23)}
 ```
 
 This is a convex semidefinite/second-order-cone feasibility problem. Use upper-triangular entries as rational coordinates; the dimension is
@@ -294,7 +294,7 @@ If $x$ is the coordinate vector of $(U,V)$, then
 
 ```math
 \|x\|_2^2\le\|U\|_F^2+\|V\|_F^2\le2\|x\|_2^2.
-\tag{24}
+\\qquad\\text{(24)}
 ```
 
 ### Outer radius
@@ -304,7 +304,7 @@ Every point of $\mathcal F_t$ has coordinate norm at most $R$. Indeed, a positiv
 ```math
 \sqrt{\|U\|_F^2+\|V\|_F^2}
 \le\mathrm{tr}U+\mathrm{tr}V\le t\le R.
-\tag{25}
+\\qquad\\text{(25)}
 ```
 
 ### Interior radius on a zero-branch input
@@ -313,7 +313,7 @@ Suppose $b=\mathcal A(X_0)$ with $X_0=ee^{\mathsf T}$, and write $S=\mathrm{tr}X
 
 ```math
 t\ge S+\varepsilon/2,
-\tag{26}
+\\qquad\\text{(26)}
 ```
 
 the set $\mathcal F_t$ contains a coordinate Euclidean ball of radius $r$. Its center is the analytically specified, possibly unknown point
@@ -321,7 +321,7 @@ the set $\mathcal F_t$ contains a coordinate Euclidean ball of radius $r$. Its c
 ```math
 U_0=X_0+\gamma I,\qquad V_0=\gamma I,
 \qquad\gamma=\frac\varepsilon{8m}.
-\tag{27}
+\\qquad\\text{(27)}
 ```
 
 At this center the residual is zero, both PSD constraints have eigenvalue margin at least $\gamma$, and the trace is $S+\varepsilon/4$.
@@ -341,7 +341,7 @@ There is a polynomial-time strong separation oracle for (23).
   ```math
   \langle\nabla f(x),y-x\rangle\le\eta^2-f(x)<0
   \quad\text{for every feasible }y,
-  \tag{28}
+  \\qquad\\text{(28)}
   ```
 
   so the gradient provides a separating hyperplane. If the gradient vanishes while $f(x)>\eta^2$, the residual constraint is infeasible everywhere, and the oracle can report that directly.
@@ -381,7 +381,7 @@ This procedure uses $O(1+\log(R/\varepsilon))$ feasibility calls. On a zero-bran
 
 ```math
 h\le S+\varepsilon.
-\tag{29}
+\\qquad\\text{(29)}
 ```
 
 Consequently the output satisfies
@@ -390,7 +390,7 @@ Consequently the output satisfies
 \|\mathcal A(\widehat X)-b\|_2\le\eta,
 \qquad
 \|\widehat X\|_*\le\mathrm{tr}(U+V)\le\|X_0\|_*+\varepsilon.
-\tag{30}
+\\qquad\\text{(30)}
 ```
 
 The nuclear-norm inequality follows from $U,V\succeq0$ and the triangle inequality. Lemma 2 gives
@@ -399,7 +399,7 @@ The nuclear-norm inequality follows from $U,V\succeq0$ and the triangle inequali
 \|\widehat X-ee^{\mathsf T}\|_F
 \le\frac{5.1}{10000}
 =0.00051<\frac12.
-\tag{31}
+\\qquad\\text{(31)}
 ```
 
 This is the precise objective guarantee needed for decoding. The algorithm need not approximate the optimum of every arbitrary SDP instance. On an alternative-branch input, any output or failure is acceptable subject to the final residual check.
@@ -410,14 +410,14 @@ The integer-error model permits a particularly simple final step. Given the rati
 
 ```math
 Y_{ij}=\mathrm{round}(\widehat X_{ij}).
-\tag{32}
+\\qquad\\text{(32)}
 ```
 
 The result is symmetric and integral. Compute its rank by exact fraction-free elimination. If $\mathrm{rank}Y>1$, output $1$ immediately. Otherwise output $0$ exactly when
 
 ```math
 \|\mathcal A(Y)-b\|_2^2\le1/16.
-\tag{33}
+\\qquad\\text{(33)}
 ```
 
 Every operation in this step is rational or integer arithmetic. In particular, the rank comparison has no floating-point threshold. The squared residual in (33) is rational and is compared exactly.
@@ -430,7 +430,7 @@ Y=ee^{\mathsf T},
 \mathrm{rank}Y\le1,
 \qquad
 \|\mathcal A(Y)-b\|_2=0.
-\tag{34}
+\\qquad\\text{(34)}
 ```
 
 This proves exact reconstruction and acceptance, including $e=0$.
@@ -440,7 +440,7 @@ On an alternative-branch input with $e\ne0$, there are three possible paths. Fai
 ```math
 \|\mathcal A(Y)-b\|_2^2
 \ge1.98\|e\|_2^2\ge1.98>1/16.
-\tag{35}
+\\qquad\\text{(35)}
 ```
 
 The residual test therefore outputs $1$. This proves the correctness conclusions of Theorem 1. The test never infers soundness from approximate rank: it checks exact rank after rounding and then uses a separate uniform separation bound.
@@ -464,7 +464,7 @@ From (22),
 
 ```math
 \log(R/r)=O\bigl(\log(R_0+1)+\log m+\log(M+1)\bigr).
-\tag{36}
+\\qquad\\text{(36)}
 ```
 
 Every quantity on the right has polynomial input encoding length. The rational projected coefficients may have large denominators, but those denominators also have polynomial bit length. Rounding a polynomial-length rational changes its bit length by at most a polynomial amount. Fraction-free elimination on the rounded integer matrix and the final rational residual calculation therefore have polynomial bit complexity as well.
@@ -473,7 +473,7 @@ For an integer encryption width $\chi_e$, take $R_0=\lceil m\chi_e^2\rceil$ on t
 
 ```math
 \log R_0=O(\log m+\log\chi_e).
-\tag{37}
+\\qquad\\text{(37)}
 ```
 
 Thus the reconstruction algorithm has no factor polynomial in the **value** of $\chi_e$. Its dependence on that scale is polynomial in $\log\chi_e$, together with the bit lengths of the actual observed integers. In the FE application the raw observations are bounded by the modulus after the correct balanced lift, so their lengths are controlled by $\log q$.
@@ -505,14 +505,14 @@ Then
 \Pr_0[D_{\rm rec}=0]\ge1-\beta_0,
 \qquad
 \Pr_1[D_{\rm rec}=0]\le\beta_1+\theta_1,
-\tag{38}
+\\qquad\\text{(38)}
 ```
 
 and the distinguishing gap is at least
 
 ```math
 1-\beta_0-\beta_1-\theta_1.
-\tag{39}
+\\qquad\\text{(39)}
 ```
 
 For independent coordinates $e_j\leftarrow D_{\mathbb Z,\chi_e}$, with weights proportional to $e^{-\pi x^2/\chi_e^2}$,
@@ -520,14 +520,14 @@ For independent coordinates $e_j\leftarrow D_{\mathbb Z,\chi_e}$, with weights p
 ```math
 \theta_1=\rho_{\chi_e}(\mathbb Z)^{-m}\le\chi_e^{-m}
 \quad(\chi_e\ge1),
-\tag{40}
+\\qquad\\text{(40)}
 ```
 
 where the inequality follows from Poisson summation. The standard norm bound, also stated as Lemma 3 of [CLÜW26], gives
 
 ```math
 \Pr[\|e\|_2>\chi_e\sqrt m]\le2^{-m}.
-\tag{41}
+\\qquad\\text{(41)}
 ```
 
 Thus $R_0=\lceil m\chi_e^2\rceil$ contributes at most $2^{-m}$ to each relevant norm-failure budget. In the wide-noise parameter family, (40) is negligible as well. Choosing inverse-exponential statistical error budgets increases the number of median-of-means blocks only polynomially; this is separate from, and does not alter, the finite-bit reconstruction argument.
