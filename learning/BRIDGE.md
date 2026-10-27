@@ -25,13 +25,19 @@ z=\mathcal K(ee^{\mathsf T})+C^{\mathsf T}\widetilde e
   -H_s^{\mathsf T}(s\otimes e)-bJ^{\mathsf T}e.
 ```
 
+The known quadratic measurement map is
+
+```math
+\mathcal K(X)_\ell=\langle K_\ell,X\rangle_F.
+```
+
 The symbols have distinct roles:
 
 | Object | Role |
 |---|---|
 | $e\in\mathbb Z^m$ | Fresh primary encryption error |
 | $s\in\mathbb Z^n$, $\widetilde e\in\mathbb Z^{\widetilde m}$ | Fresh randomizer and auxiliary error |
-| $K_\ell$, $C$ | Known functional-key coefficients; $\mathcal K(X)_\ell=\langle K_\ell,X\rangle_F$ |
+| $K_\ell$, $C$ | Known quadratic and auxiliary functional-key coefficients |
 | $H_s$ | Fixed hidden coefficients of the randomizer–error products |
 | $J$ | Fixed hidden coefficients associated with the first message coordinate |
 | $b\in\{0,1\}$ | Zero for training; the challenge message is $be_1$ |
@@ -100,11 +106,11 @@ The kernel consists of vectors proportional to $(1,-1)^{\mathsf T}$, so
 P=\frac12\begin{pmatrix}1&-1\\-1&1\end{pmatrix}.
 ```
 
-Let the quadratic signal be $q_*=(4,1)^{\mathsf T}$ and subtract the nuisance term $3(1,1)^{\mathsf T}$. The observed vector is $z=q_*-3(1,1)^{\mathsf T}=(1,-2)^{\mathsf T}$. Direct multiplication gives
+Let the quadratic signal be $q_{\star}=(4,1)^{\mathsf T}$ and subtract the nuisance term $3(1,1)^{\mathsf T}$. The observed vector is $z=q_{\star}-3(1,1)^{\mathsf T}=(1,-2)^{\mathsf T}$. Direct multiplication gives
 
 ```math
 Pz=\begin{pmatrix}3/2\\-3/2\end{pmatrix}
-=Pq_*.
+=Pq_{\star}.
 ```
 
 The hidden nuisance has disappeared. The projection has also discarded one signal direction: this example retains only the difference between the two signal coordinates. That loss explains why cancellation alone is insufficient. The full theorem needs enough remaining measurements to determine the relevant low-rank matrix. This toy calculation illustrates the kernel operation, not the full sampler, parameter family or recovery theorem.
