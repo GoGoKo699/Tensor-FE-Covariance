@@ -6,7 +6,7 @@ This repository develops a classical polynomial-time distinguishing argument for
 
 The adversary uses valid monomial functional keys and polynomially many honest encryptions of a known zero message. It learns an exact hidden integer Gram matrix from cross-covariances, removes the corresponding nuisance subspace, and distinguishes the challenge messages $0$ and $e_1$ by testing for a rank-one explanation. All requested functions agree on those two messages.
 
-**The proved distinguishing gap is $1-\operatorname{negl}(\lambda)$ under the explicit dimension, smoothing, width and correctness conditions in the [main theorem](science/attack.md).** An [asymptotic parameter family](science/parameters.md) satisfies these conditions together with the target's numerical safeguards and compactness requirement. The result also applies directly to the corresponding degree-two secret-key tensor-preimage assumption experiment.
+**The proved distinguishing gap is $1-\mathrm{negl}(\lambda)$ under the explicit dimension, smoothing, width and correctness conditions in the [main theorem](science/attack.md).** An [asymptotic parameter family](science/parameters.md) satisfies these conditions together with the target's numerical safeguards and compactness requirement. The result also applies directly to the corresponding degree-two secret-key tensor-preimage assumption experiment.
 
 The claim is parameter-dependent. It supplies no ordinary-LWE algorithm and no practical attack timing.
 
@@ -22,7 +22,7 @@ z=\mathcal K(ee^{\mathsf T})+C^{\mathsf T}\widetilde e
 With independent encryption coordinates of common discrete-Gaussian variance $v$,
 
 ```math
-\operatorname{Cov}(z)
+\mathrm{Cov}(z)
 =C_K+vC^{\mathsf T}C+v^2H_s^{\mathsf T}H_s.
 ```
 

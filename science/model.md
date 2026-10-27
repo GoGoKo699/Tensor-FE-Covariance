@@ -30,7 +30,7 @@ D_{S,\sigma}(z)=\frac{\exp(-\pi\|z\|_2^2/\sigma^2)}{\rho_\sigma(S)}.
 
 Widths use the lattice-cryptography convention: a continuous Gaussian with the same density has variance $\sigma^2/(2\pi)$ in each coordinate. The exact variance of $D_{\mathbb Z,\chi}$ is denoted by $v_\chi$; it is not silently replaced by its continuous value.
 
-Vectors are columns. Tensor indices use the explicitly displayed order; an $m^2$-vector indexed by $(i,j)$ is identified with an $m\times m$ matrix having that entry. Thus $(e\otimes e)^{\mathsf T}\operatorname{vec}(K)=e^{\mathsf T}Ke$. No symmetry of the sampled $K$ is assumed. The inner product on matrices is the Frobenius inner product. For a residue modulo odd $q$, $\operatorname{bal}_q$ denotes its representative in $(-q/2,q/2)$.
+Vectors are columns. Tensor indices use the explicitly displayed order; an $m^2$-vector indexed by $(i,j)$ is identified with an $m\times m$ matrix having that entry. Thus $(e\otimes e)^{\mathsf T}\mathrm{vec}(K)=e^{\mathsf T}Ke$. No symmetry of the sampled $K$ is assumed. The inner product on matrices is the Frobenius inner product. For a residue modulo odd $q$, $\mathrm{bal}_q$ denotes its representative in $(-q/2,q/2)$.
 
 ## 2. The public key columns and hidden extension
 
@@ -68,7 +68,7 @@ Here $C$ denotes the matrix called $\widetilde K$ in [CLÜW26]. The shorter nota
 Theorem 2 of [CLÜW26] permits analysis in an ideal distribution where the hidden setup matrices are uniform and, conditional on them, each complete column
 
 ```math
-W_\ell=(\operatorname{vec}K_\ell,C_\ell,(F_L)_\ell,(F_R)_\ell)
+W_\ell=(\mathrm{vec}K_\ell,C_\ell,(F_L)_\ell,(F_R)_\ell)
 ```
 
 is a spherical discrete Gaussian on the appropriate affine preimage lattice coset. Different columns are conditionally independent; their affine targets may differ. The actual output distribution of $(A,\widetilde A,K,C)$ is negligibly close to the corresponding marginal of this ideal full extension. The hidden $F_L,F_R$ are analysis variables supplied by that extension; no claim about an implementation-specific hidden witness is required. The model does **not** assert that the coordinates within a column are independent. The required smoothing property is derived from the published trapdoor bound in [Gaussian measurements](gaussian_measurements.md).
@@ -115,7 +115,7 @@ The factor is exactly $p^2$. Each mixed ciphertext term supplies one factor $p$;
 The published correctness bound chooses $q$ large enough that the integer on the right lies in the balanced interval except with negligible probability. For keys whose authorized function value is known to be zero, the adversary therefore computes
 
 ```math
-z_y=\frac{1}{p^2}\operatorname{bal}_q
+z_y=\frac{1}{p^2}\mathrm{bal}_q
  \big((c\otimes c)^{\mathsf T}Ky+\widetilde c^{\mathsf T}Cy\big).
 ```
 

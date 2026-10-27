@@ -2,7 +2,7 @@
 
 ## The established conclusion
 
-The [main theorem](attack.md) gives a classical polynomial-time distinguisher for a specified degree-two family of the Cini–Lai–Ünal–Woo construction. It uses valid monomial functional keys and polynomially many known-zero encryptions. The two challenge messages are $0$ and $e_1$; every queried function evaluates to zero on both. The distinguishing gap is $1-\operatorname{negl}(\lambda)$.
+The [main theorem](attack.md) gives a classical polynomial-time distinguisher for a specified degree-two family of the Cini–Lai–Ünal–Woo construction. It uses valid monomial functional keys and polynomially many known-zero encryptions. The two challenge messages are $0$ and $e_1$; every queried function evaluates to zero on both. The distinguishing gap is $1-\mathrm{negl}(\lambda)$.
 
 The same mechanism distinguishes the corresponding direct secret-key tensor-preimage assumption experiments in [the model](model.md). That implication is established from their explicit distributions, not inferred merely from a failure of the construction.
 

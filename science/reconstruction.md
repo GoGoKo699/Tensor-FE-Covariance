@@ -10,15 +10,15 @@ The application is the degree-two construction of Cini, Lai, Ãœnal, and Woo [CLÃ
 
 ## 1. Algebraic model and encoding
 
-Let $m,L\ge1$. Let $\operatorname{Sym}_m$ denote the real symmetric $m\times m$ matrices, equipped with the Frobenius inner product and norm. For public integer matrices $K_1,\ldots,K_L\in\mathbb Z^{m\times m}$, define
+Let $m,L\ge1$. Let $\mathrm{Sym}_m$ denote the real symmetric $m\times m$ matrices, equipped with the Frobenius inner product and norm. For public integer matrices $K_1,\ldots,K_L\in\mathbb Z^{m\times m}$, define
 
 ```math
 \mathcal K(X)_\ell=\langle K_\ell,X\rangle_F,
-\qquad X\in\operatorname{Sym}_m.
+\qquad X\in\mathrm{Sym}_m.
 \tag{1}
 ```
 
-The matrices $K_\ell$ need not be symmetric. Their symmetric parts define the same map on $\operatorname{Sym}_m$.
+The matrices $K_\ell$ need not be symmetric. Their symmetric parts define the same map on $\mathrm{Sym}_m$.
 
 Let
 
@@ -152,7 +152,7 @@ Define the rational map and data
 \tag{11}
 ```
 
-The projector's range is orthogonal to $\operatorname{im}H_s^{\mathsf T}+\operatorname{im}C^{\mathsf T}$. Consequently,
+The projector's range is orthogonal to $\mathrm{im}H_s^{\mathsf T}+\mathrm{im}C^{\mathsf T}$. Consequently,
 
 ```math
 \|a\Pi[\mathcal K(X)+J^{\mathsf T}w]\|_2
@@ -180,7 +180,7 @@ Applying (5) uniformly before this infimum gives two facts.
 \tag{14}
 ```
 
-Here $\operatorname{rank}(Y-ee^{\mathsf T})\le2$. If the integer vector $e$ is nonzero, the squared residual exceeds one. This soundness statement holds for every rank-one candidate, independently of how it was produced.
+Here $\mathrm{rank}(Y-ee^{\mathsf T})\le2$. If the integer vector $e$ is nonzero, the squared residual exceeds one. This soundness statement holds for every rank-one candidate, independently of how it was produced.
 
 An explicit bound for the unrestricted operator norm will be useful. Set
 
@@ -203,7 +203,7 @@ This global norm bound is derived from the input, not from low-rank RIP.
 
 The following proof is a quantitative form of the usual nuclear-norm tangent-space argument [RFP10]. It applies within the symmetric matrix space.
 
-**Lemma 2.** Suppose (13) holds. Let $X_0\in\operatorname{Sym}_m$ have rank at most one. If a symmetric $\widehat X$ satisfies
+**Lemma 2.** Suppose (13) holds. Let $X_0\in\mathrm{Sym}_m$ have rank at most one. If a symmetric $\widehat X$ satisfies
 
 ```math
 \|\mathcal A(\widehat X-X_0)\|_2\le\eta,
@@ -225,7 +225,7 @@ then
 H_c=(I-P_0)H(I-P_0),\qquad H_0=H-H_c.
 ```
 
-Then $\operatorname{rank}H_0\le2$, and $H_0,H_c$ are Frobenius-orthogonal. The nuclear norm is additive between $X_0$ and $H_c$. The triangle inequality and (17) give
+Then $\mathrm{rank}H_0\le2$, and $H_0,H_c$ are Frobenius-orthogonal. The nuclear norm is additive between $X_0$ and $H_c$. The triangle inequality and (17) give
 
 ```math
 \|H_c\|_*\le\|H_0\|_*+\varepsilon
@@ -276,9 +276,9 @@ r=\min\left\{\frac\varepsilon{64m},\frac\eta{16M}\right\}.
 For a rational level $t\in[0,R]$, define
 
 ```math
-\mathcal F_t=\left\{(U,V)\in\operatorname{Sym}_m^2:
+\mathcal F_t=\left\{(U,V)\in\mathrm{Sym}_m^2:
 U,V\succeq0,\quad
-\operatorname{tr}(U+V)\le t,\quad
+\mathrm{tr}(U+V)\le t,\quad
 \|\mathcal A(U-V)-b\|_2\le\eta
 \right\}.
 \tag{23}
@@ -303,13 +303,13 @@ Every point of $\mathcal F_t$ has coordinate norm at most $R$. Indeed, a positiv
 
 ```math
 \sqrt{\|U\|_F^2+\|V\|_F^2}
-\le\operatorname{tr}U+\operatorname{tr}V\le t\le R.
+\le\mathrm{tr}U+\mathrm{tr}V\le t\le R.
 \tag{25}
 ```
 
 ### Interior radius on a zero-branch input
 
-Suppose $b=\mathcal A(X_0)$ with $X_0=ee^{\mathsf T}$, and write $S=\operatorname{tr}X_0=\|e\|_2^2\le R_0$. For every
+Suppose $b=\mathcal A(X_0)$ with $X_0=ee^{\mathsf T}$, and write $S=\mathrm{tr}X_0=\|e\|_2^2\le R_0$. For every
 
 ```math
 t\ge S+\varepsilon/2,
@@ -389,7 +389,7 @@ Consequently the output satisfies
 ```math
 \|\mathcal A(\widehat X)-b\|_2\le\eta,
 \qquad
-\|\widehat X\|_*\le\operatorname{tr}(U+V)\le\|X_0\|_*+\varepsilon.
+\|\widehat X\|_*\le\mathrm{tr}(U+V)\le\|X_0\|_*+\varepsilon.
 \tag{30}
 ```
 
@@ -409,11 +409,11 @@ This is the precise objective guarantee needed for decoding. The algorithm need 
 The integer-error model permits a particularly simple final step. Given the rational symmetric matrix $\widehat X$ from Section 6, round each entry to its nearest integer, using any fixed rule at exact ties:
 
 ```math
-Y_{ij}=\operatorname{round}(\widehat X_{ij}).
+Y_{ij}=\mathrm{round}(\widehat X_{ij}).
 \tag{32}
 ```
 
-The result is symmetric and integral. Compute its rank by exact fraction-free elimination. If $\operatorname{rank}Y>1$, output $1$ immediately. Otherwise output $0$ exactly when
+The result is symmetric and integral. Compute its rank by exact fraction-free elimination. If $\mathrm{rank}Y>1$, output $1$ immediately. Otherwise output $0$ exactly when
 
 ```math
 \|\mathcal A(Y)-b\|_2^2\le1/16.
@@ -427,7 +427,7 @@ On a zero-branch input, $ee^{\mathsf T}$ is an integer matrix, and (31) implies 
 ```math
 Y=ee^{\mathsf T},
 \qquad
-\operatorname{rank}Y\le1,
+\mathrm{rank}Y\le1,
 \qquad
 \|\mathcal A(Y)-b\|_2=0.
 \tag{34}

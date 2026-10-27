@@ -28,12 +28,12 @@ Assume the following properties, all of which hold for the explicit asymptotic f
 There is a classical probabilistic polynomial-time adversary making $L$ valid functional-key queries and polynomially many known-zero encryption observations such that
 
 ```math
-\left|\Pr[\mathcal D(\operatorname{Enc}(0))=0]
-      -\Pr[\mathcal D(\operatorname{Enc}(e_1))=0]\right|
- =1-\operatorname{negl}(\lambda).
+\left|\Pr[\mathcal D(\mathrm{Enc}(0))=0]
+      -\Pr[\mathcal D(\mathrm{Enc}(e_1))=0]\right|
+ =1-\mathrm{negl}(\lambda).
 ```
 
-The keys are the distinct monomials $x_ix_j$ with $i\le j$, excluding $x_1^2$. Every requested function has output zero on both messages. The success probability of guessing a uniformly random challenge bit is therefore $1-\operatorname{negl}(\lambda)$ as well. The adversary uses honest ciphertexts and the published functional keys; it never receives the hidden encryption matrices.
+The keys are the distinct monomials $x_ix_j$ with $i\le j$, excluding $x_1^2$. Every requested function has output zero on both messages. The success probability of guessing a uniformly random challenge bit is therefore $1-\mathrm{negl}(\lambda)$ as well. The adversary uses honest ciphertexts and the published functional keys; it never receives the hidden encryption matrices.
 
 The theorem is an asymptotic polynomial-time statement. Its statistical and convex-optimization costs are included in the proof; it is not a claim that the resulting polynomial is small at practical parameters.
 
@@ -49,10 +49,10 @@ z=\mathcal K(ee^{\mathsf T})+C^{\mathsf T}\widetilde e
 Let $v=v_\chi$ and $\mu_4=\mathbb E[e_i^4]$. For each pair of exposed columns, [Noise covariance](noise_covariance.md) proves the exact identity
 
 ```math
-\operatorname{Cov}(z)=C_K+vC^{\mathsf T}C+v^2H_s^{\mathsf T}H_s,
+\mathrm{Cov}(z)=C_K+vC^{\mathsf T}C+v^2H_s^{\mathsf T}H_s,
 ```
 
-with a completely known matrix $C_K$. The known mean is $v\operatorname{tr}(K_\ell)$ in coordinate $\ell$.
+with a completely known matrix $C_K$. The known mean is $v\mathrm{tr}(K_\ell)$ in coordinate $\ell$.
 
 The estimator normalizes by $v$ before taking products. Its variance is bounded by a polynomial in the dimensions and a public high-probability bound on the short-key entries. It therefore estimates
 
@@ -98,7 +98,7 @@ where $X$ is symmetric, $u\in\mathbb R^{nm}$, $v\in\mathbb R^{\widetilde m}$, an
  =\|X\|_F^2+2\|u\|_2^2+\|v\|_2^2+2\|w\|_2^2.
 ```
 
-Each mixed block is the sum of two distinct coordinates of the complete preimage column, which explains the factors of two. The four groups occupy disjoint coordinates. The [Gaussian measurement theorem](gaussian_measurements.md) proves, with negligible failure, that for all such tuples with $\operatorname{rank}X\le10$,
+Each mixed block is the sum of two distinct coordinates of the complete preimage column, which explains the factors of two. The four groups occupy disjoint coordinates. The [Gaussian measurement theorem](gaussian_measurements.md) proves, with negligible failure, that for all such tuples with $\mathrm{rank}X\le10$,
 
 ```math
 (1-\delta_0)\|(X,u,v,w)\|_\diamond^2
@@ -186,6 +186,6 @@ Adding these bounds proves the theorem. The bounds use a conservative accounting
 
 ## 6. Consequence for the underlying assumption
 
-Use all $k^2$ exposed columns in the direct assumption experiment described in [Model, Section 5](model.md#5-direct-tensor-assumption-interpretation). With all specified messages equal to zero, the two experiments again differ by the extra mixed block $J^{\mathsf T}e$. The same learner and decision rule apply, with the Gaussian theorem verified separately for the two setup lattices. This gives advantage $1-\operatorname{negl}(\lambda)$ against the degree-two secret-key tensor-preimage assumption in the stated parameter family.
+Use all $k^2$ exposed columns in the direct assumption experiment described in [Model, Section 5](model.md#5-direct-tensor-assumption-interpretation). With all specified messages equal to zero, the two experiments again differ by the extra mixed block $J^{\mathsf T}e$. The same learner and decision rule apply, with the Gaussian theorem verified separately for the two setup lattices. This gives advantage $1-\mathrm{negl}(\lambda)$ against the degree-two secret-key tensor-preimage assumption in the stated parameter family.
 
 The proof requires no algorithm for ordinary LWE and makes no claim to invalidate its hardness. The distinction is the additional, correlated short-preimage key material and the repeated known-message observations supplied by this construction. The [interpretation](interpretation.md) explains the parameter boundary and the role of large encryption noise.

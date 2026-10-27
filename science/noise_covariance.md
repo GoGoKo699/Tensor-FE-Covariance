@@ -14,7 +14,7 @@ Keys are fixed across observations. The three fresh vectors have independent coo
 Write $v=\mathbb E[e_i^2]$ and $\mu_4=\mathbb E[e_i^4]$. Symmetry gives zero odd moments. The mean is
 
 ```math
-\mathbb E z_\ell=v\,\operatorname{tr}K_\ell.
+\mathbb E z_\ell=v\,\mathrm{tr}K_\ell.
 ```
 
 For possibly nonsymmetric $K_\ell$, separate diagonal and off-diagonal terms:
@@ -46,7 +46,7 @@ The linear auxiliary term has covariance $vC^{\mathsf T}C$. The bilinear term ha
 All cross-covariances vanish. In a quadratic–bilinear product, the remaining $s_a$ has mean zero. Products involving the independent centered $\widetilde e$ vanish as well. These calculations condition on all keys and require no independence between coordinates within a key column. Thus
 
 ```math
-\boxed{\operatorname{Cov}(z)=C_K+vC^{\mathsf T}C+v^2G,\qquad
+\boxed{\mathrm{Cov}(z)=C_K+vC^{\mathsf T}C+v^2G,\qquad
 G=H_s^{\mathsf T}H_s\in\mathbb Z^{L\times L}.}
 ```
 
@@ -94,7 +94,7 @@ Suppose every relevant coordinate of the complete key extension has absolute val
 Section 5 supplies this event with negligible failure. Normalize and center each coordinate:
 
 ```math
-Y_\ell=\frac{z_\ell}{v}-\operatorname{tr}K_\ell.
+Y_\ell=\frac{z_\ell}{v}-\mathrm{tr}K_\ell.
 ```
 
 It is a sum of at most
@@ -120,7 +120,7 @@ The deterministic inequality $|\sum_{i=1}^t a_i|^4\le t^3\sum_i|a_i|^4$ gives
 Consequently
 
 ```math
-\operatorname{Var}(Y_\ell Y_j)
+\mathrm{Var}(Y_\ell Y_j)
 \le\mathbb E[Y_\ell^2Y_j^2]\le V.
 ```
 

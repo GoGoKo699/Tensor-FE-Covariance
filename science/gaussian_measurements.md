@@ -9,7 +9,7 @@ All constants below are deliberately conservative. In particular, the logarithmi
 Let
 
 ```math
-\mathcal V=\operatorname{Sym}_m(\mathbb R)\oplus\mathbb R^{d_0},
+\mathcal V=\mathrm{Sym}_m(\mathbb R)\oplus\mathbb R^{d_0},
 \qquad
 \|(X,z)\|_{\mathcal V}^2=\|X\|_F^2+\|z\|_2^2,
 ```
@@ -38,7 +38,7 @@ Define the normalized linear map
 \tag{1}
 ```
 
-Then the probability that there exists a pair with $\operatorname{rank}(X)\le r$ for which
+Then the probability that there exists a pair with $\mathrm{rank}(X)\le r$ for which
 
 ```math
 (1-\delta)(\|X\|_F^2+\|z\|_2^2)
@@ -74,7 +74,7 @@ gives failure probability at most
 ```
 
 Since $\kappa\le 2rm+d_0$, this has the form
-$L\ge C\delta^{-2}(rm+d_0)\log(\operatorname{poly}(m,d_0,L,r)/\delta)$.
+$L\ge C\delta^{-2}(rm+d_0)\log(\mathrm{poly}(m,d_0,L,r)/\delta)$.
 The appearance of $L$ inside the logarithm is explicit; (4) is a sufficient inequality, not an assertion that its constants are small.
 
 The same result holds conditionally on any shared setup variable for which these hypotheses hold. Thus the cosets and the lattice may depend on the setup. They must be fixed after conditioning, with the rows independent under that conditioning.
@@ -161,7 +161,7 @@ The extra factor $\sqrt2$ in the smoothing hypothesis will control derivatives o
 and
 
 ```math
-\left\|\frac{2\pi}{\sigma^2}\operatorname{Cov}(W)-I_N\right\|_{\rm op}
+\left\|\frac{2\pi}{\sigma^2}\mathrm{Cov}(W)-I_N\right\|_{\rm op}
 \le5\varepsilon.
 \tag{12}
 ```
@@ -348,7 +348,7 @@ Write
 ```math
 \mathcal S_r=
 \{(X,z)\in\mathcal V:
-\operatorname{rank}(X)\le r,\ \|X\|_F^2+\|z\|_2^2=1\}.
+\mathrm{rank}(X)\le r,\ \|X\|_F^2+\|z\|_2^2=1\}.
 ```
 
 **Lemma 4 (covering number).** For $0<\eta\le1$, there is an $\eta$-net
@@ -363,7 +363,7 @@ $\mathcal N\subset\mathcal S_r$ in the $\mathcal V$-norm with
 **Proof.** Every member of $\mathcal S_r$ has a representation
 
 ```math
-X=U\operatorname{diag}(a)U^{\mathsf T},
+X=U\mathrm{diag}(a)U^{\mathsf T},
 \quad U^{\mathsf T}U=I_r,
 \quad \|a\|_2^2+\|z\|_2^2=1.
 ```
@@ -372,11 +372,11 @@ Zero eigenvalues pad matrices of rank less than $r$. A maximal $h$-separated sub
 $(1+2\sqrt r/h)^{mr}$ members. Its centers remain on the Stiefel manifold.
 
 The same volume argument gives an $h$-net of the unit sphere in $\mathbb R^{r+d_0}$, with centers on that sphere and at most $(1+2/h)^{r+d_0}$ members. Approximate $U$ and $(a,z)$ by these nets. For a fixed orthonormal $U$, the map
-$(a,z)\mapsto(U\operatorname{diag}(a)U^{\mathsf T},z)$ is an isometry. Changing $U$ to $\widehat U$ changes the matrix by at most
+$(a,z)\mapsto(U\mathrm{diag}(a)U^{\mathsf T},z)$ is an isometry. Changing $U$ to $\widehat U$ changes the matrix by at most
 
 ```math
-\|(U-\widehat U)\operatorname{diag}(\widehat a)U^{\mathsf T}\|_F
-+\|\widehat U\operatorname{diag}(\widehat a)
+\|(U-\widehat U)\mathrm{diag}(\widehat a)U^{\mathsf T}\|_F
++\|\widehat U\mathrm{diag}(\widehat a)
         (U-\widehat U)^{\mathsf T}\|_F
 \le2h,
 ```
@@ -475,9 +475,9 @@ Fix $h=k+n$. For one key column, order its coordinates as
 
 ```math
 W_\ell=
-\bigl(\operatorname{vec}(K_\ell),\ \widetilde K_\ell,
-\ \operatorname{vec}(F_{01,\ell}),
-\ \operatorname{vec}(F_{10,\ell})\bigr),
+\bigl(\mathrm{vec}(K_\ell),\ \widetilde K_\ell,
+\ \mathrm{vec}(F_{01,\ell}),
+\ \mathrm{vec}(F_{10,\ell})\bigr),
 ```
 
 where
@@ -523,8 +523,8 @@ Then the coefficient vector of
 inside the full $W_\ell$ space is exactly
 
 ```math
-\bigl(\operatorname{vec}X,\ v,
-\operatorname{vec}(C(u,w)),\operatorname{vec}(C(u,w)^{\mathsf T})\bigr).
+\bigl(\mathrm{vec}X,\ v,
+\mathrm{vec}(C(u,w)),\mathrm{vec}(C(u,w)^{\mathsf T})\bigr).
 \tag{34}
 ```
 
@@ -551,7 +551,7 @@ The isometry $\iota$ sends this rescaled tuple to (34). Consequently, with
 \tau=\sigma\sqrt{\frac L{2\pi}},
 \quad
 \mathcal M(X,u,v,w)
-=K_{\rm key}^{\mathsf T}\operatorname{vec}X
+=K_{\rm key}^{\mathsf T}\mathrm{vec}X
 +H_s^{\mathsf T}u+\widetilde K^{\mathsf T}v+H_1^{\mathsf T}w,
 ```
 
@@ -733,7 +733,7 @@ Let $P$ be the orthogonal projector onto
 and define
 
 ```math
-\mathcal A_P(X)=\tau^{-1}P K_{\rm key}^{\mathsf T}\operatorname{vec}X.
+\mathcal A_P(X)=\tau^{-1}P K_{\rm key}^{\mathsf T}\mathrm{vec}X.
 ```
 
 The distance to the nuisance span is
@@ -747,7 +747,7 @@ The distance to the nuisance span is
 
 The lower bound in (36), uniform over all $u,v$, and the upper bound with $u=v=0$, show that $\mathcal A_P$ has the same rank-$r$ RIP constants.
 
-Likewise, if $X_0$ has rank one and $X'$ has rank at most one, then $\operatorname{rank}(X'-X_0)\le2$. For $r\ge2$, (36) gives
+Likewise, if $X_0$ has rank one and $X'$ has rank at most one, then $\mathrm{rank}(X'-X_0)\le2$. For $r\ge2$, (36) gives
 
 ```math
 \left\|\mathcal A_P(X'-X_0)+\tau^{-1}P H_1^{\mathsf T}e\right\|_2

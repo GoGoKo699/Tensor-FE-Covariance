@@ -92,10 +92,10 @@ For the degree-two family, a conservative version of the target's correctness qu
 This dominates the published Table 1 expression for the FE scheme, and its same derivation covers the direct assumption's extra coordinate. The target's Gaussian norm and key bounds imply $|z_y|\le\Gamma_+$ except with negligible probability for the coefficient vectors used here.
 
 Now $\sigma,m,n,k,\widetilde m$ are polynomial in $\lambda$, while
-$\chi^2=T^{1/6}\operatorname{poly}(\lambda)$. Therefore
+$\chi^2=T^{1/6}\mathrm{poly}(\lambda)$. Therefore
 
 ```math
-\Gamma_+=T^{1/6}\operatorname{poly}(\lambda),
+\Gamma_+=T^{1/6}\mathrm{poly}(\lambda),
 \qquad
 \frac{T}{8(\Gamma_++1)}\longrightarrow\infty.
 ```
@@ -147,7 +147,7 @@ As $\lambda\to\infty$,
 n&=\Theta(\lambda),&
 m&=\Theta(\lambda^2(\log\lambda)^2),\\
 d_0&=\Theta(\lambda^3(\log\lambda)^2),&
-N_{\rm col}&=\operatorname{poly}(\lambda).
+N_{\rm col}&=\mathrm{poly}(\lambda).
 \end{aligned}
 ```
 
@@ -188,7 +188,7 @@ Ciphertext length obeys
 
 Thus the compactness requirement holds, for example with $\varepsilon=1/4$ at degree two. The number of ciphertext coordinates grows by a logarithmic factor beyond $k$; a prior restriction to a fixed linear number of coordinates should not be silently treated as covering this family.
 
-The learned-Gram sample count is polynomial because $\sigma$ and its public tail bound $B$ are polynomial. The finite-bit decoder costs polynomial time in the dimensions and $\log R_0$. Its total running time is therefore $\operatorname{poly}(\lambda)$, which is eventually less than $T$, despite $\chi$ and $q$ being superpolynomial.
+The learned-Gram sample count is polynomial because $\sigma$ and its public tail bound $B$ are polynomial. The finite-bit decoder costs polynomial time in the dimensions and $\log R_0$. Its total running time is therefore $\mathrm{poly}(\lambda)$, which is eventually less than $T$, despite $\chi$ and $q$ being superpolynomial.
 
 ## 6. What this family establishes
 
