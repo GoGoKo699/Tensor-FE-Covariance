@@ -1,0 +1,24 @@
+# Tensor FE Covariance
+
+> Research notes on normalized noise covariance and finite-bit matrix recovery in quadratic tensor functional encryption.
+
+## Established scope
+
+Classical polynomial-time distinction for the specified degree-two family of Cini–Lai–Ünal–Woo, ePrint 2026/1977 (September 11, 2026 version). Uses many valid monomial keys and repeated known-zero encryptions. The gap is 1-negligible under the explicit hypotheses. Also covers the corresponding direct secret-key tensor-preimage assumption experiment.
+
+No claim about ordinary LWE hardness, every allowed parameter choice, higher degrees, or practical attack costs.
+
+## Authoritative scientific notes
+
+- [Model](science/model.md): definitions, ciphertext expansion, permitted access.
+- [Covariance](science/noise_covariance.md): exact discrete moments and integer Gram recovery.
+- [Gaussian measurements](science/gaussian_measurements.md): full affine-lattice law, smoothing and joint RIP before projection.
+- [Reconstruction](science/reconstruction.md): rational projection, bounded ellipsoid feasibility, integer rounding and exact decision.
+- [Parameters](science/parameters.md): compatible explicit asymptotic family.
+- [Theorem](science/attack.md): complete dependencies, resource accounting and probability bound.
+- [Interpretation](science/interpretation.md): consequences and limits.
+- [Related work](references/RELATED_WORK.md): prior methods and source-access gaps.
+- [Verification](verification/README.md): four limited reproducible algebra checks.
+
+The proof uses the actual output marginal of an ideal hidden full-column extension. It does not assume independent coordinates inside a column or independent projected measurement rows after conditioning on the learned projector. The full SDP/ellipsoid procedure is proved, not implemented by the verification scripts.
+
