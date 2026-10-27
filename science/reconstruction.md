@@ -338,13 +338,13 @@ There is a polynomial-time strong separation oracle for (23).
 - If $U$ or $V$ is not PSD, rational symmetric elimination produces a rational vector $v$ with $v^{\mathsf T}Uv<0$, or the analogous inequality for $V$. The linear functional $W\mapsto v^{\mathsf T}Wv$ separates the query from the feasible set.
 - For a violated residual constraint, let $f(U,V)=\|\mathcal A(U-V)-b\|_2^2$. Its value and gradient at a rational query are rational. Convexity gives
 
-  ```math
-  \langle\nabla f(x),y-x\rangle\le\eta^2-f(x)<0
-  \quad\text{for every feasible }y,
-  \qquad\text{(28)}
-  ```
+```math
+\langle\nabla f(x),y-x\rangle\le\eta^2-f(x)<0
+\quad\text{for every feasible }y,
+\qquad\text{(28)}
+```
 
-  so the gradient provides a separating hyperplane. If the gradient vanishes while $f(x)>\eta^2$, the residual constraint is infeasible everywhere, and the oracle can report that directly.
+The gradient therefore provides a separating hyperplane. If the gradient vanishes while $f(x)>\eta^2$, the residual constraint is infeasible everywhere, and the oracle can report that directly.
 
 PSD testing here needs neither floating-point eigenvalues nor a condition-number promise. A constructive rational test repeatedly takes a positive diagonal pivot and its Schur complement. A negative diagonal gives an immediate negative quadratic witness. If all remaining diagonal entries vanish but an off-diagonal entry is nonzero, a two-coordinate vector gives such a witness. Lifting a witness through a Schur complement preserves rationality. The entries and witnesses are ratios of bounded-size minors, so their bit lengths are polynomial in the matrix size and query encoding length.
 

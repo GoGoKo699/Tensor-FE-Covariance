@@ -18,9 +18,9 @@ Assume the following properties, all of which hold for the explicit asymptotic f
 2. Outside a negligible setup event, the common column lattice $\Lambda$ satisfies $\sigma/\sqrt2\ge\eta_{\epsilon}(\Lambda)$ for negligible $\epsilon$.
 3. For a sufficiently large absolute constant $C$, the number of queried columns satisfies
 
-   ```math
-   L\ge C\big[(10m+d_0)\log(2N_{\rm col}L)+\lambda\big].
-   ```
+```math
+L\ge C\big[(10m+d_0)\log(2N_{\rm col}L)+\lambda\big].
+```
 
 4. The dimensions and $\sigma$ are polynomially bounded in $\lambda$. The width $\sigma$ is a rational input or admits polynomial-time certified interval approximation, so the measurement normalization can be computed to the required relative precision. The common encryption width satisfies $\chi\ge1$, with $\log\chi$ polynomially bounded; $m\ge\lambda$. The prescribed discrete Gaussian moments are computable to polynomial-bit precision.
 5. The published correctness bounds give negligible failure of the balanced integer lift for every polynomial number of observations used here. All modulus and input bit lengths are polynomially bounded. A public encoded radius $R_0$ bounds the challenge $\|e\|_2^2$ except with negligible probability, with $\log R_0$ polynomially bounded.
